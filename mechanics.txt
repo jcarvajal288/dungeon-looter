@@ -1,0 +1,13 @@
+* player movement
+* single room
+* moving between rooms
+* basic items with value
+* putting items into inventory
+* outside with cart and storage
+* ending game and calculating value
+* key and lock puzzle
+* multiple item puzzle
+* simple patrolling enemy
+* orthogonal attack animations
+* combat and health
+* single small level

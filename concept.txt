@@ -1,0 +1,16 @@
+Zelda-style resident evil 1 dungeon crawler
+
+Dungeon as mansion
+
+Limited saves with 'Resurrection stones'
+
+Limited inventory a la older resident evils
+
+Items have Balatro style scoring: a gold value and a multiplier
+
+There is a cart outside with unlimited inventory that you put treasure into
+    You can leave at any time and are scored on what you brought out
+
+Think of a mechanic to involve time in scoring as well to encourage speedruns
+
+Use the Ranger from Minifantasy Heroes III

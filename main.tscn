@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cgha2yl5jai6y"]
+
+[ext_resource type="PackedScene" uid="uid://thok4a87rm7p" path="res://Actors/Ranger/Ranger.tscn" id="1_ig7tw"]
+
+[node name="Node2D" type="Node2D" unique_id=2090323297]
+
+[node name="Ranger" parent="." unique_id=231123919 instance=ExtResource("1_ig7tw")]
+position = Vector2(71, 73)
