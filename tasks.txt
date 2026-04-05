@@ -1,4 +1,4 @@
-* player movement
+x player movement
 * single room
 * moving between rooms
 * basic items with value
