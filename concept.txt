@@ -3,6 +3,8 @@ Zelda-style resident evil 1 dungeon crawler
 Dungeon as mansion
 
 Limited saves with 'Resurrection stones'
+    - Resurrection stones have value and multiplier so you are encouraged to save as little as possible
+    - Item that can socket all resurrection stones for a massive bonus
 
 Limited inventory a la older resident evils
 

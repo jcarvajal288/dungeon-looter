@@ -1,5 +1,6 @@
 x player movement
 x single room
+* camera follows player and is clamped to room boundaries
 * moving between rooms
 * basic items with value
 * putting items into inventory
