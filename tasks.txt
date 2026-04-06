@@ -1,5 +1,5 @@
 x player movement
-* single room
+x single room
 * moving between rooms
 * basic items with value
 * putting items into inventory

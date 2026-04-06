@@ -1,8 +1,11 @@
-extends CharacterBody2D
+class_name Ranger extends CharacterBody2D
 
 const speed = 40
 
 var facing = "SouthEast"
+
+func _ready() -> void:
+	z_index =  Global.RenderOrder.PLAYER
 
 
 func _physics_process(_delta: float) -> void:
