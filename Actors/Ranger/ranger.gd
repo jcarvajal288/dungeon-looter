@@ -5,6 +5,7 @@ const speed = 40
 var facing = "SouthEast"
 
 func _ready() -> void:
+	Global.player = self
 	z_index =  Global.RenderOrder.PLAYER
 
 
