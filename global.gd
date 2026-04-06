@@ -7,3 +7,7 @@ enum RenderOrder {
 	WALL = 2,
 	PLAYER = 5
 }
+
+@warning_ignore_start("unused_signal")
+signal bind_camera(rect: Rect2)
+@warning_ignore_restore("unused_signal")
