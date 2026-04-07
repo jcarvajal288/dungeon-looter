@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dh4l4kix608b2"]
+
+[ext_resource type="Script" uid="uid://d2jvk33kr64ec" path="res://Levels/Components/RoomManager/room_manager.gd" id="1_d27um"]
+
+[node name="RoomManager" type="Node" unique_id=167211916]
+script = ExtResource("1_d27um")

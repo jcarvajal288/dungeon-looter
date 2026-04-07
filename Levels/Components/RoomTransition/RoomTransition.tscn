@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cwc5urnfwtwji"]
+
+[ext_resource type="Script" uid="uid://c7v5uf7iwe5co" path="res://Levels/Components/RoomTransition/room_transition.gd" id="1_x08a5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwbfh"]
+size = Vector2(8.5, 8)
+
+[node name="RoomTransition" type="Area2D" unique_id=2069600767]
+script = ExtResource("1_x08a5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=167524929]
+shape = SubResource("RectangleShape2D_kwbfh")
+
+[node name="PlayerEntryPoint" type="Marker2D" parent="." unique_id=1971202014]
+position = Vector2(8, 0)
+gizmo_extents = 4.0

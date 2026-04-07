@@ -4,13 +4,16 @@
 [ext_resource type="PackedScene" uid="uid://thok4a87rm7p" path="res://Actors/Ranger/Ranger.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cwytewg8al65p" path="res://Levels/Dungeon/TestRoom/TestRoom.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://d0clx0vq8j1a2" path="res://UI/FollowPlayerCamera/FollowPlayerCamera.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dh4l4kix608b2" path="res://Levels/Components/RoomManager/RoomManager.tscn" id="4_1bvp3"]
 
 [node name="Node2D" type="Node2D" unique_id=2090323297]
 script = ExtResource("1_1bvp3")
+starting_room = ExtResource("2_0xm2m")
 
 [node name="Ranger" parent="." unique_id=231123919 instance=ExtResource("1_ig7tw")]
-position = Vector2(71, 73)
-
-[node name="TestRoom" parent="." unique_id=425892536 instance=ExtResource("2_0xm2m")]
+z_index = 5
+position = Vector2(103, 67)
 
 [node name="FollowPlayerCamera" parent="." unique_id=1706340102 instance=ExtResource("3_h2yge")]
+
+[node name="RoomManager" parent="." unique_id=167211916 instance=ExtResource("4_1bvp3")]

@@ -1,6 +1,9 @@
 extends Node2D
 
+@export var starting_room: PackedScene
+
 
 func _ready() -> void:
-	Global.bind_camera.emit($TestRoom.get_rect())
-
+	var room = starting_room.instantiate()
+	$RoomManager.set_room(room)
+	Global.bind_camera.emit(room.get_rect())

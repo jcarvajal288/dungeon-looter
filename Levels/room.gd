@@ -8,6 +8,7 @@ func _ready() -> void:
 	var pos = room_rect.position * MAP_TILE_SIZE
 	var size = room_rect.size * MAP_TILE_SIZE
 	Global.bind_camera.emit(Rect2(pos, size))
+	Global.player.get_node("CollisionShape2D").set_deferred("disabled", false)
 
 
 func get_entry_point(_entry_id: String) -> Vector2:
