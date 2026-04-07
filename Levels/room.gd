@@ -7,8 +7,6 @@ func _ready() -> void:
 	var room_rect = $TileMapFloor.get_used_rect()
 	var pos = room_rect.position * MAP_TILE_SIZE
 	var size = room_rect.size * MAP_TILE_SIZE
-
-	print("base room bind")
 	Global.bind_camera.emit(Rect2(pos, size))
 
 
