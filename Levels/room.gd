@@ -1,6 +1,6 @@
 class_name Room extends Node2D
 
-const MAP_TILE_SIZE = 8
+const MAP_TILE_SIZE = 16
 
 
 func _ready() -> void:

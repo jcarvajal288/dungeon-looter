@@ -17,11 +17,14 @@ tile_map_data = PackedByteArray("AAAAAAAAAAABAAEAAAABAAAAAAACAAEAAAACAAAAAAACAAE
 tile_set = ExtResource("2_my825")
 
 [node name="WesternExit" parent="." unique_id=2069600767 instance=ExtResource("3_my825")]
-position = Vector2(-7, 28)
+position = Vector2(-7, 56.03)
 next_room_path = "res://Levels/Dungeon/TestRoom/TestRoom.tscn"
 entry_id = "EasternExit"
 
 [node name="CollisionShape2D" parent="WesternExit" index="0" unique_id=167524929]
-position = Vector2(-1, 0)
+position = Vector2(-8, -0.02999878)
+
+[node name="PlayerEntryPoint" parent="WesternExit" index="1" unique_id=1971202014]
+position = Vector2(11, -0.02999878)
 
 [editable path="WesternExit"]

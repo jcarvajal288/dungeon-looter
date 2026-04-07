@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c2uqy01wrjgk8" path="res://Actors/Ranger/ranger.gd" id="1_dn2y7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bfyra"]
-radius = 3.0
+radius = 6.0
 
 [sub_resource type="Animation" id="Animation_dn2y7"]
 length = 0.001

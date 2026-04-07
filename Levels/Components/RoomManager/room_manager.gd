@@ -19,7 +19,6 @@ func _transition_room(next_room_path: String, entry_id: String) -> void:
 	while is_obstructed:
 		is_obstructed = check_for_collisions_at(target_position)
 		if is_obstructed:
-			print("obstructed")
 			await get_tree().physics_frame
 		else:
 			Global.player.global_position = room.get_entry_point(entry_id)
