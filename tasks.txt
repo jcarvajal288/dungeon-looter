@@ -2,10 +2,14 @@ x player movement
 x single room
 x camera follows player and is clamped to room boundaries
 x moving between rooms
+* basic item with value
 * inventory screen
-* basic items with value
-* putting items into inventory
+    x toggle screen on and off
+    * show empty slots
+    * putting item into inventory
+    * dropping item out of inventory
 * outside with cart and storage
+    * move items between inventory and storage
 * ending game and calculating value
 * key and lock puzzle
 * multiple item puzzle
