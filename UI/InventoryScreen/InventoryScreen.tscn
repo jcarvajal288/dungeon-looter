@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cy08k8bi1sxs2"]
+
+[ext_resource type="Script" uid="uid://cxokht7ad874q" path="res://UI/InventoryScreen/inventory_screen.gd" id="1_0h4yy"]
+[ext_resource type="Texture2D" uid="uid://6suddyqwtq3b" path="res://UI/InventoryScreen/_art/base.png" id="1_v6q66"]
+
+[node name="InventoryScreen" type="CanvasLayer" unique_id=1798393088]
+script = ExtResource("1_0h4yy")
+
+[node name="Control" type="Control" parent="." unique_id=2138811646]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=501316274]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_v6q66")
