@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c4723js17b6uj" path="res://Actors/Ranger/_art/Ranger.png" id="1_bfyra"]
 [ext_resource type="Script" uid="uid://c2uqy01wrjgk8" path="res://Actors/Ranger/ranger.gd" id="1_dn2y7"]
+[ext_resource type="PackedScene" uid="uid://cd4i6f0p2nnkq" path="res://Items/Inventory/Inventory.tscn" id="3_kra87"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bfyra"]
 radius = 6.0
@@ -192,3 +193,5 @@ shape = SubResource("CircleShape2D_bfyra")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=940959743]
 libraries/ = SubResource("AnimationLibrary_qk1gc")
 autoplay = &"idleSouthEast"
+
+[node name="Inventory" parent="." unique_id=2019854857 instance=ExtResource("3_kra87")]

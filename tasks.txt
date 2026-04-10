@@ -2,7 +2,7 @@ x player movement
 x single room
 x camera follows player and is clamped to room boundaries
 x moving between rooms
-* basic item with value
+x simple item 
 + inventory screen
 	x toggle screen on and off
 	x show empty slots

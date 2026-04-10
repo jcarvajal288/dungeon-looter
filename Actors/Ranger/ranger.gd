@@ -9,6 +9,11 @@ func _ready() -> void:
 	z_index =  Global.RenderOrder.PLAYER
 
 
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("interact"):
+		check_for_item()
+
+
 func _physics_process(_delta: float) -> void:
 	var movement_vector = get_movement_vector()
 	move(movement_vector)
@@ -50,3 +55,19 @@ func determine_facing(direction: Vector2) -> String:
 			return "NorthWest"
 	else:
 		return facing
+
+
+func check_for_item() -> void:
+	var space_state = get_world_2d().direct_space_state
+	var query = PhysicsShapeQueryParameters2D.new()
+	query.shape = $CollisionShape2D.shape
+	query.transform = global_transform
+	query.collide_with_areas = true 
+	query.collide_with_bodies = false
+	query.collision_mask = 1 << (Global.CollisionLayer.ITEM - 1)
+
+	var results = space_state.intersect_shape(query)
+	for result in results:
+		var node = result.collider
+		if node is Item:
+			node.queue_free()

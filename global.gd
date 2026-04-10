@@ -8,6 +8,12 @@ enum RenderOrder {
 	PLAYER = 5
 }
 
+enum CollisionLayer {
+	PLAYER = 1,
+	ENEMY = 2,
+	ITEM = 3
+}
+
 @warning_ignore_start("unused_signal")
 signal bind_camera(rect: Rect2)
 signal transition_room(next_room_path: Node2D, entry_id: String)
