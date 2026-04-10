@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cxokht7ad874q" path="res://UI/InventoryScreen/inventory_screen.gd" id="1_0h4yy"]
 [ext_resource type="Texture2D" uid="uid://6suddyqwtq3b" path="res://UI/InventoryScreen/_art/base.png" id="1_v6q66"]
+[ext_resource type="PackedScene" uid="uid://clsiylnl7ar11" path="res://UI/InventoryScreen/InventoryGrid.tscn" id="3_0dd31"]
 
 [node name="InventoryScreen" type="CanvasLayer" unique_id=1798393088]
 script = ExtResource("1_0h4yy")
@@ -17,3 +18,6 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_v6q66")
+
+[node name="InventoryGrid" parent="Control" unique_id=903042863 instance=ExtResource("3_0dd31")]
+position = Vector2(194, 73)

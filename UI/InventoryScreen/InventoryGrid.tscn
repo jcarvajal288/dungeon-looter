@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://clsiylnl7ar11"]
+
+[ext_resource type="Texture2D" uid="uid://usaaovfuuka5" path="res://UI/InventoryScreen/_art/slot.png" id="1_2b8xg"]
+
+[node name="InventoryGrid" type="Node2D" unique_id=903042863]
+
+[node name="Slot" type="Sprite2D" parent="." unique_id=720067069]
+position = Vector2(24, 24)
+texture = ExtResource("1_2b8xg")
+
+[node name="Slot2" type="Sprite2D" parent="." unique_id=320249361]
+position = Vector2(70, 24)
+texture = ExtResource("1_2b8xg")
+
+[node name="Slot3" type="Sprite2D" parent="." unique_id=1779121677]
+position = Vector2(24, 70)
+texture = ExtResource("1_2b8xg")
+
+[node name="Slot4" type="Sprite2D" parent="." unique_id=1764572594]
+position = Vector2(70, 70)
+texture = ExtResource("1_2b8xg")
+
+[node name="Slot5" type="Sprite2D" parent="." unique_id=1394229372]
+position = Vector2(24, 116)
+texture = ExtResource("1_2b8xg")
+
+[node name="Slot6" type="Sprite2D" parent="." unique_id=1622994381]
+position = Vector2(70, 116)
+texture = ExtResource("1_2b8xg")
