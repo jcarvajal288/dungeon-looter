@@ -4,6 +4,8 @@ const speed = 80
 
 var facing = "SouthEast"
 
+@export var inventory: Inventory
+
 func _ready() -> void:
 	Global.player = self
 	z_index =  Global.RenderOrder.PLAYER
@@ -70,8 +72,8 @@ func check_for_item() -> void:
 	for result in results:
 		var node = result.collider
 		if node is Item:
-			if $Inventory.add_item(node.item_code):
+			if inventory.add_item(node.item_data):
 				node.queue_free()
-				print($Inventory.slots)
+				print(inventory.items)
 			else:
 				print("Inventory full")

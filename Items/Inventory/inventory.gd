@@ -1,24 +1,20 @@
-extends Node
-
-class InventoryItem:
-	var item_id: int
-	var amount: int
+class_name Inventory extends Resource
 
 var inventory_size = 6
-var slots = []
+var items = []
 
 
-func _ready() -> void:
-	slots.resize(inventory_size)
-	slots.fill(null)
+func _init() -> void:
+	items.resize(inventory_size)
+	items.fill(null)
 
 
-func add_item(item_code: Items.ItemCode) -> bool:
+func add_item(item_data: ItemData) -> bool:
 	for i in range(inventory_size):
-		if slots[i] == null:
+		if items[i] == null:
 			var item = InventoryItem.new()
-			item.item_id = item_code
+			item.item_data = item_data
 			item.amount = 0
-			slots[i] = item
+			items[i] = item
 			return true
 	return false

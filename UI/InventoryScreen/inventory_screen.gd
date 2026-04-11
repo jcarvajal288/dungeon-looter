@@ -1,19 +1,23 @@
 extends CanvasLayer
 
-@onready var inventory = $Control
+@export var inventory: Inventory
+
+@onready var control = $Control
 
 
 func _ready() -> void:
-	inventory.visible = false
+	control.visible = false
 
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("toggle_inventory"):
 		toggle_inventory()
-	elif event.is_action_pressed("ui_cancel") and inventory.visible:
+	elif event.is_action_pressed("ui_cancel") and control.visible:
 		toggle_inventory()
 
 
 func toggle_inventory() -> void:
-	inventory.visible = !inventory.visible
-	#get_tree().paused = inventory.visible # this needs to pause only the game, not everything
+	control.visible = !control.visible
+	if control.visible:
+		$Control/InventoryGrid.refresh(inventory)
+	#get_tree().paused = control.visible # this needs to pause only the game, not everything

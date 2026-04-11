@@ -1,29 +1,30 @@
 [gd_scene format=3 uid="uid://clsiylnl7ar11"]
 
-[ext_resource type="Texture2D" uid="uid://usaaovfuuka5" path="res://UI/InventoryScreen/_art/slot.png" id="1_2b8xg"]
+[ext_resource type="PackedScene" uid="uid://payd11p2ne5h" path="res://UI/InventoryScreen/InventorySlot.tscn" id="1_2b8xg"]
+[ext_resource type="Script" uid="uid://8n0dkbhkthlg" path="res://UI/InventoryScreen/inventory_grid.gd" id="1_8bwmd"]
 
-[node name="InventoryGrid" type="Node2D" unique_id=903042863]
+[node name="InventoryGrid" type="GridContainer" unique_id=1096015609]
+offset_right = 95.0
+offset_bottom = 142.0
+theme_override_constants/h_separation = -1
+theme_override_constants/v_separation = -1
+columns = 2
+script = ExtResource("1_8bwmd")
 
-[node name="Slot" type="Sprite2D" parent="." unique_id=720067069]
-position = Vector2(24, 24)
-texture = ExtResource("1_2b8xg")
+[node name="InventorySlot1" parent="." unique_id=3149455 instance=ExtResource("1_2b8xg")]
+layout_mode = 2
 
-[node name="Slot2" type="Sprite2D" parent="." unique_id=320249361]
-position = Vector2(70, 24)
-texture = ExtResource("1_2b8xg")
+[node name="InventorySlot2" parent="." unique_id=539592789 instance=ExtResource("1_2b8xg")]
+layout_mode = 2
 
-[node name="Slot3" type="Sprite2D" parent="." unique_id=1779121677]
-position = Vector2(24, 70)
-texture = ExtResource("1_2b8xg")
+[node name="InventorySlot3" parent="." unique_id=1231809466 instance=ExtResource("1_2b8xg")]
+layout_mode = 2
 
-[node name="Slot4" type="Sprite2D" parent="." unique_id=1764572594]
-position = Vector2(70, 70)
-texture = ExtResource("1_2b8xg")
+[node name="InventorySlot4" parent="." unique_id=1096632031 instance=ExtResource("1_2b8xg")]
+layout_mode = 2
 
-[node name="Slot5" type="Sprite2D" parent="." unique_id=1394229372]
-position = Vector2(24, 116)
-texture = ExtResource("1_2b8xg")
+[node name="InventorySlot5" parent="." unique_id=1525228945 instance=ExtResource("1_2b8xg")]
+layout_mode = 2
 
-[node name="Slot6" type="Sprite2D" parent="." unique_id=1622994381]
-position = Vector2(70, 116)
-texture = ExtResource("1_2b8xg")
+[node name="InventorySlot6" parent="." unique_id=1402700004 instance=ExtResource("1_2b8xg")]
+layout_mode = 2
