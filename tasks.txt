@@ -6,7 +6,7 @@ x simple item
 + inventory screen
 	x toggle screen on and off
 	x show empty slots
-	* putting item into inventory
+	x putting item into inventory
 	* dropping item out of inventory
 * outside with cart and storage
 	* move items between inventory and storage

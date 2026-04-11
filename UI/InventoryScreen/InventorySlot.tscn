@@ -3,9 +3,12 @@
 [ext_resource type="Script" uid="uid://cy24qoj5wbcm4" path="res://UI/InventoryScreen/inventory_slot.gd" id="1_5qrgj"]
 [ext_resource type="Texture2D" uid="uid://usaaovfuuka5" path="res://UI/InventoryScreen/_art/slot.png" id="2_arsq8"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5qrgj"]
+
 [node name="InventorySlot" type="PanelContainer" unique_id=3149455]
 offset_right = 48.0
 offset_bottom = 48.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5qrgj")
 script = ExtResource("1_5qrgj")
 
 [node name="ItemImage" type="TextureRect" parent="." unique_id=69972060]
