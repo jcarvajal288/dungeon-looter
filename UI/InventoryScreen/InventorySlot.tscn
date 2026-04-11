@@ -11,6 +11,8 @@ script = ExtResource("1_5qrgj")
 [node name="ItemImage" type="TextureRect" parent="." unique_id=69972060]
 z_index = 1
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="SlotBackground" type="TextureRect" parent="." unique_id=1779081137]
 layout_mode = 2
