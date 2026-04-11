@@ -70,4 +70,8 @@ func check_for_item() -> void:
 	for result in results:
 		var node = result.collider
 		if node is Item:
-			node.queue_free()
+			if $Inventory.add_item(node.item_code):
+				node.queue_free()
+				print($Inventory.slots)
+			else:
+				print("Inventory full")
