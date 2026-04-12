@@ -12,6 +12,7 @@ func _ready() -> void:
 
 
 func get_entry_point(_entry_id: String) -> Vector2:
+	printerr("No get_entry_point defined for room")
 	return Vector2.ZERO
 
 
