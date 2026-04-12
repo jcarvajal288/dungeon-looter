@@ -4,8 +4,10 @@
 [ext_resource type="TileSet" uid="uid://u5el5mbcxhcx" path="res://Levels/Outside/_art/forgotten_plains.tres" id="2_26pid"]
 [ext_resource type="PackedScene" uid="uid://bouaw5vwspud3" path="res://Levels/Outside/Props/DungeonEntrance/DungeonEntrance.tscn" id="3_mli8n"]
 [ext_resource type="PackedScene" uid="uid://cwc5urnfwtwji" path="res://Levels/Components/RoomTransition/RoomTransition.tscn" id="4_lpl2x"]
+[ext_resource type="PackedScene" uid="uid://bvb8jjer7ykoa" path="res://Levels/Outside/Props/WagonStorageBox/WagonStorageBox.tscn" id="5_702kf"]
 
 [node name="Camp" type="Node2D" unique_id=1228026603]
+y_sort_enabled = true
 script = ExtResource("1_lpl2x")
 metadata/_custom_type_script = "uid://bldeqkqxsiakj"
 
@@ -21,6 +23,7 @@ tile_set = ExtResource("2_26pid")
 position = Vector2(162, 51)
 
 [node name="TransitionToDungeon" parent="." unique_id=2069600767 instance=ExtResource("4_lpl2x")]
+y_sort_enabled = true
 position = Vector2(162, 64)
 next_room_path = "res://Levels/Dungeon/TestRoom/TestRoom.tscn"
 entry_id = "ExitToOutside"
@@ -30,5 +33,8 @@ position = Vector2(0, -4)
 
 [node name="PlayerEntryPoint" parent="TransitionToDungeon" index="1" unique_id=1971202014]
 position = Vector2(0, 12)
+
+[node name="WagonStorageBox" parent="." unique_id=1178806714 instance=ExtResource("5_702kf")]
+position = Vector2(164, 157)
 
 [editable path="TransitionToDungeon"]

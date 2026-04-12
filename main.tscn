@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dh4l4kix608b2" path="res://Levels/Components/RoomManager/RoomManager.tscn" id="4_1bvp3"]
 
 [node name="Node2D" type="Node2D" unique_id=2090323297]
+y_sort_enabled = true
 script = ExtResource("1_1bvp3")
 starting_room = ExtResource("2_0xm2m")
 

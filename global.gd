@@ -5,7 +5,7 @@ var player: CharacterBody2D = null
 enum RenderOrder {
 	FLOOR = 1,
 	WALL = 2,
-	PLAYER = 5
+	PLAYER = 5,
 }
 
 enum CollisionLayer {

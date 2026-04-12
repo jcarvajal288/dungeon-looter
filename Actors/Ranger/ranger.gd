@@ -74,6 +74,5 @@ func check_for_item() -> void:
 		if node is Item:
 			if inventory.add_item(node.item_data):
 				node.queue_free()
-				print(inventory.items)
 			else:
 				print("Inventory full")

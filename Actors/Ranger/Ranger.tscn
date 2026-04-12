@@ -180,6 +180,7 @@ _data = {
 }
 
 [node name="Ranger" type="CharacterBody2D" unique_id=231123919]
+y_sort_enabled = true
 script = ExtResource("1_dn2y7")
 inventory = ExtResource("2_kra87")
 
