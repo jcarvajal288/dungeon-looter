@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://bvb8jjer7ykoa"]
 
-[ext_resource type="Script" uid="uid://b416mdr3pkk6w" path="res://Levels/prop.gd" id="1_jskay"]
+[ext_resource type="Script" uid="uid://tkaj3c06bqpl" path="res://Levels/Outside/Props/WagonStorageBox/wagon_storage_box.gd" id="1_jskay"]
 [ext_resource type="Texture2D" uid="uid://c5tltye47ejhh" path="res://Levels/Outside/_art/wagon_chest.png" id="1_yfddq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jskay"]
 radius = 14.0
 height = 56.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhq24"]
+radius = 20.0
+height = 70.0
 
 [node name="WagonStorageBox" type="StaticBody2D" unique_id=365739491]
 y_sort_enabled = true
@@ -22,3 +26,12 @@ y_sort_enabled = true
 position = Vector2(0, 6)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_jskay")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1495053743]
+collision_layer = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1124288559]
+position = Vector2(0, 6)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_qhq24")
+debug_color = Color(0.6, 0, 0.7019608, 0.41960785)

@@ -76,3 +76,6 @@ func check_for_item() -> void:
 				node.queue_free()
 			else:
 				print("Inventory full")
+		if node.name == "InteractionArea":
+			if node.get_parent() is WagonStorageBox:
+				Global.toggle_storage_box_screen.emit()

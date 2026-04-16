@@ -5,7 +5,6 @@
 [ext_resource type="Resource" uid="uid://bw7ffuyvifd6y" path="res://Items/Key/KeyData.tres" id="2_3prvl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hq4k1"]
-radius = 6.0
 
 [node name="KeySmall" type="Area2D" unique_id=1091964245]
 collision_layer = 4
@@ -16,6 +15,7 @@ metadata/_custom_type_script = "uid://biqlbke5mul2h"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=111375434]
 shape = SubResource("CircleShape2D_hq4k1")
+debug_color = Color(0.6, 0, 0.7019608, 0.41960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1296212335]
 texture = ExtResource("1_csago")

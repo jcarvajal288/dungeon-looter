@@ -7,8 +7,12 @@ x inventory screen
 	x toggle screen on and off
 	x show empty slots
 	x putting item into inventory
-* outside with cart and storage
-* move items between inventory and storage
+x outside with cart and storage
++ storage box screen
+    x open storage box screen screen when interacting with cart
+    * switch between inventory focus and storage focus
+    * move inventory focus around
+    * move item between inventory and storage
 * ending game and calculating value
 * key and lock puzzle
 * multiple item puzzle

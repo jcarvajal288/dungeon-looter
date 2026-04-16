@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cm6lsohd60ov7"]
+
+[ext_resource type="Script" uid="uid://bysads5hhtpk1" path="res://UI/StorageBoxScreen/storage_box_screen.gd" id="1_lti8u"]
+[ext_resource type="Texture2D" uid="uid://ct5rhjfocdrd" path="res://UI/StorageBoxScreen/_art/StorageBoxBase.png" id="1_qmyi4"]
+[ext_resource type="Texture2D" uid="uid://cq264enbbdpbg" path="res://UI/StorageBoxScreen/_art/InventorySelector.png" id="3_lr1bg"]
+[ext_resource type="Texture2D" uid="uid://co7qdi8uk7qa6" path="res://UI/StorageBoxScreen/_art/StorageBoxSelector.png" id="4_lwxnu"]
+
+[node name="StorageBoxScreen" type="CanvasLayer" unique_id=592483484]
+script = ExtResource("1_lti8u")
+
+[node name="Control" type="Control" parent="." unique_id=1495998652]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BaseTexture" type="TextureRect" parent="Control" unique_id=1464951487]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_qmyi4")
+
+[node name="InventorySelector" type="TextureRect" parent="Control" unique_id=2136986085]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 37.0
+offset_right = 262.0
+offset_bottom = 77.0
+texture = ExtResource("3_lr1bg")
+
+[node name="StorageBoxSelector" type="TextureRect" parent="Control" unique_id=569405174]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 103.0
+offset_right = 190.0
+offset_bottom = 143.0
+texture = ExtResource("4_lwxnu")
