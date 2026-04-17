@@ -4,10 +4,15 @@
 [ext_resource type="Script" uid="uid://8n0dkbhkthlg" path="res://UI/InventoryScreen/inventory_grid.gd" id="1_8bwmd"]
 
 [node name="InventoryGrid" type="GridContainer" unique_id=1096015609]
-offset_right = 95.0
-offset_bottom = 142.0
-theme_override_constants/h_separation = -1
-theme_override_constants/v_separation = -1
+anchors_preset = -1
+anchor_right = 0.20300001
+anchor_bottom = 0.455
+offset_right = 0.039993286
+offset_bottom = -0.040008545
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
 columns = 2
 script = ExtResource("1_8bwmd")
 
@@ -27,4 +32,10 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="InventorySlot6" parent="." unique_id=1402700004 instance=ExtResource("1_2b8xg")]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="." unique_id=1921336012 instance=ExtResource("1_2b8xg")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="." unique_id=112445417 instance=ExtResource("1_2b8xg")]
 layout_mode = 2

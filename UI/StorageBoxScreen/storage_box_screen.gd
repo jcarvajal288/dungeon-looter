@@ -3,10 +3,13 @@ extends CanvasLayer
 const INVENTORY_TOP_LEFT = Vector2(222, 37)
 const INVENTORY_SELECTOR_SIDE = 33
 
+@export var inventory: Inventory
+
 @onready var control = $Control
 @onready var inventory_selector: TextureRect = $Control/InventorySelector
 @onready var storage_box_selector: TextureRect = $Control/StorageBoxSelector
 @onready var selected_slot: Vector2i = Vector2i(0, 0)
+@onready var inventory_grid = $Control/InventoryGrid
 
 func _ready() -> void:
 	inventory_selector.position = INVENTORY_TOP_LEFT
@@ -19,6 +22,7 @@ func _ready() -> void:
 func toggle_screen() -> void:
 	control.visible = !control.visible
 	if control.visible:
+		inventory_grid.refresh(inventory)
 		self.process_mode = Node.PROCESS_MODE_INHERIT
 	else:
 		self.process_mode = Node.PROCESS_MODE_DISABLED

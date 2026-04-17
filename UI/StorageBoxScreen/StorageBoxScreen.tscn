@@ -2,11 +2,14 @@
 
 [ext_resource type="Script" uid="uid://bysads5hhtpk1" path="res://UI/StorageBoxScreen/storage_box_screen.gd" id="1_lti8u"]
 [ext_resource type="Texture2D" uid="uid://ct5rhjfocdrd" path="res://UI/StorageBoxScreen/_art/StorageBoxBase.png" id="1_qmyi4"]
+[ext_resource type="Resource" uid="uid://je3mw8g6sr5r" path="res://Items/Inventory/inventory.tres" id="2_lr1bg"]
 [ext_resource type="Texture2D" uid="uid://cq264enbbdpbg" path="res://UI/StorageBoxScreen/_art/InventorySelector.png" id="3_lr1bg"]
 [ext_resource type="Texture2D" uid="uid://co7qdi8uk7qa6" path="res://UI/StorageBoxScreen/_art/StorageBoxSelector.png" id="4_lwxnu"]
+[ext_resource type="PackedScene" uid="uid://clsiylnl7ar11" path="res://UI/InventoryScreen/InventoryGrid.tscn" id="6_lwxnu"]
 
 [node name="StorageBoxScreen" type="CanvasLayer" unique_id=592483484]
 script = ExtResource("1_lti8u")
+inventory = ExtResource("2_lr1bg")
 
 [node name="Control" type="Control" parent="." unique_id=1495998652]
 layout_mode = 3
@@ -35,3 +38,17 @@ offset_top = 103.0
 offset_right = 190.0
 offset_bottom = 143.0
 texture = ExtResource("4_lwxnu")
+
+[node name="InventoryGrid" parent="Control" unique_id=1096015609 instance=ExtResource("6_lwxnu")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 226.0
+offset_top = 41.0
+offset_right = 292.0
+offset_bottom = 175.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[editable path="Control/InventoryGrid"]
