@@ -80,7 +80,9 @@ func handle_moving_to_storage(event: InputEvent) -> void:
 
 func get_selected_inventory_item() -> InventoryItem:
 	var slot_index = selected_slot.y * 2 + selected_slot.x
-	return inventory.remove_item(slot_index)
+	var item = inventory.remove_item(slot_index)
+	inventory_grid.remove_item(slot_index)
+	return item
 
 
 func focus_inventory() -> void:

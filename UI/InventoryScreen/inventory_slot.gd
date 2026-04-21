@@ -7,3 +7,8 @@ func update_slot(item_data: ItemData) -> void:
 		$ItemImage.show()
 	else:
 		$ItemImage.hide()
+
+
+func clear() -> void:
+	$ItemImage.texture = null
+	$ItemImage.hide()
