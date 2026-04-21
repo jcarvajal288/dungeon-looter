@@ -12,6 +12,7 @@ const INVENTORY_SELECTOR_SIDE = 33
 @onready var selected_slot: Vector2i = Vector2i(0, 0)
 @onready var inventory_grid = $Control/InventoryGrid
 @onready var storage_grid = $Control/StorageGrid
+@onready var item_info = $Control/ItemInfo
 
 enum States {
 	SELECTING_INVENTORY,
@@ -48,6 +49,12 @@ func _input(event: InputEvent) -> void:
 	var new_x = INVENTORY_TOP_LEFT.x + selected_slot.x * INVENTORY_SELECTOR_SIDE
 	var new_y = INVENTORY_TOP_LEFT.y + selected_slot.y * INVENTORY_SELECTOR_SIDE
 	inventory_selector.position = Vector2(new_x, new_y)
+	if state == States.SELECTING_INVENTORY:
+		var slot_index = selected_slot.y * 2 + selected_slot.x
+		item_info.update(inventory.items[slot_index])
+	elif state == States.SELECTING_STORAGE:
+		item_info.update(storage.items[2])
+
 
 
 func handle_inventory_selection(event: InputEvent) -> void:
@@ -88,6 +95,8 @@ func get_selected_inventory_item() -> InventoryItem:
 func focus_inventory() -> void:
 	inventory_selector.visible = true
 	storage_box_selector.visible = false
+	var slot_index = selected_slot.y * 2 + selected_slot.x
+	item_info.update(inventory.items[slot_index])
 
 func focus_storage_box(show_inventory_selection: bool) -> void:
 	inventory_selector.visible = show_inventory_selection

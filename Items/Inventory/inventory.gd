@@ -1,6 +1,6 @@
 class_name Inventory extends Resource
 
-var inventory_size = 6
+var inventory_size = 8
 var items = []
 
 

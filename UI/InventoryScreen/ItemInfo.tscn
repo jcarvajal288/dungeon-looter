@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bygvlwo44c1ya"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qdspn"]
+font_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_2jkk4"]
+font_size = 5
+
+[node name="ItemInfo" type="VBoxContainer" unique_id=669613231]
+custom_minimum_size = Vector2(160, 32)
+theme_override_constants/separation = 1
+
+[node name="Name" type="Label" parent="." unique_id=1345911346]
+layout_mode = 2
+text = "Item Name"
+label_settings = SubResource("LabelSettings_qdspn")
+
+[node name="Description" type="Label" parent="." unique_id=1626916096]
+layout_mode = 2
+text = "The Item's Description"
+label_settings = SubResource("LabelSettings_2jkk4")

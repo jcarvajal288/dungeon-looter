@@ -2,10 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://d311plpudj7cw" path="res://Items/Key/_art/key_large.png" id="1_c8kr3"]
 [ext_resource type="Script" uid="uid://c033c2hyxuv6k" path="res://Items/item_data.gd" id="1_fc74k"]
+[ext_resource type="Texture2D" uid="uid://sj3xr6ok7e0v" path="res://Items/Key/_art/key_small.png" id="3_c8kr3"]
 
 [resource]
 script = ExtResource("1_fc74k")
 name = "Key"
 description = "A Small Key"
+small_icon = ExtResource("3_c8kr3")
 large_icon = ExtResource("1_c8kr3")
 metadata/_custom_type_script = "uid://c033c2hyxuv6k"

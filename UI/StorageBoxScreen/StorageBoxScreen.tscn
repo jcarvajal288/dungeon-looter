@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://clsiylnl7ar11" path="res://UI/InventoryScreen/InventoryGrid.tscn" id="6_lwxnu"]
 [ext_resource type="Script" uid="uid://dcbiou8vvqrgk" path="res://UI/StorageBoxScreen/storage_grid.gd" id="8_qpwxg"]
 [ext_resource type="PackedScene" uid="uid://03wr5jqqawpa" path="res://UI/StorageBoxScreen/StorageSlot.tscn" id="9_krqbg"]
+[ext_resource type="PackedScene" uid="uid://bygvlwo44c1ya" path="res://UI/InventoryScreen/ItemInfo.tscn" id="10_krqbg"]
+[ext_resource type="Script" uid="uid://bf8iogclhaigs" path="res://UI/InventoryScreen/item_info.gd" id="11_lyvcn"]
 
 [node name="StorageBoxScreen" type="CanvasLayer" unique_id=592483484]
 process_mode = 1
@@ -80,5 +82,13 @@ layout_mode = 2
 
 [node name="StorageSlot5" parent="Control/StorageGrid" unique_id=272083573 instance=ExtResource("9_krqbg")]
 layout_mode = 2
+
+[node name="ItemInfo" parent="Control" unique_id=669613231 instance=ExtResource("10_krqbg")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 233.0
+offset_right = 190.0
+offset_bottom = 265.0
+script = ExtResource("11_lyvcn")
 
 [editable path="Control/InventoryGrid"]
