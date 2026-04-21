@@ -3,13 +3,18 @@
 [ext_resource type="Script" uid="uid://bysads5hhtpk1" path="res://UI/StorageBoxScreen/storage_box_screen.gd" id="1_lti8u"]
 [ext_resource type="Texture2D" uid="uid://ct5rhjfocdrd" path="res://UI/StorageBoxScreen/_art/StorageBoxBase.png" id="1_qmyi4"]
 [ext_resource type="Resource" uid="uid://je3mw8g6sr5r" path="res://Items/Inventory/inventory.tres" id="2_lr1bg"]
+[ext_resource type="Resource" uid="uid://cop6i1iyjj5lm" path="res://Items/StorageBox/storage.tres" id="3_d1wjq"]
 [ext_resource type="Texture2D" uid="uid://cq264enbbdpbg" path="res://UI/StorageBoxScreen/_art/InventorySelector.png" id="3_lr1bg"]
 [ext_resource type="Texture2D" uid="uid://co7qdi8uk7qa6" path="res://UI/StorageBoxScreen/_art/StorageBoxSelector.png" id="4_lwxnu"]
 [ext_resource type="PackedScene" uid="uid://clsiylnl7ar11" path="res://UI/InventoryScreen/InventoryGrid.tscn" id="6_lwxnu"]
+[ext_resource type="Script" uid="uid://dcbiou8vvqrgk" path="res://UI/StorageBoxScreen/storage_grid.gd" id="8_qpwxg"]
+[ext_resource type="PackedScene" uid="uid://03wr5jqqawpa" path="res://UI/StorageBoxScreen/StorageSlot.tscn" id="9_krqbg"]
 
 [node name="StorageBoxScreen" type="CanvasLayer" unique_id=592483484]
+process_mode = 1
 script = ExtResource("1_lti8u")
 inventory = ExtResource("2_lr1bg")
+storage = ExtResource("3_d1wjq")
 
 [node name="Control" type="Control" parent="." unique_id=1495998652]
 layout_mode = 3
@@ -50,5 +55,30 @@ offset_right = 292.0
 offset_bottom = 175.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="StorageGrid" type="GridContainer" parent="Control" unique_id=1459028632]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 41.0
+offset_right = 186.0
+offset_bottom = 205.0
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
+script = ExtResource("8_qpwxg")
+
+[node name="StorageSlot1" parent="Control/StorageGrid" unique_id=1428203888 instance=ExtResource("9_krqbg")]
+layout_mode = 2
+
+[node name="StorageSlot2" parent="Control/StorageGrid" unique_id=66114872 instance=ExtResource("9_krqbg")]
+layout_mode = 2
+
+[node name="StorageSlot3" parent="Control/StorageGrid" unique_id=2065468415 instance=ExtResource("9_krqbg")]
+layout_mode = 2
+
+[node name="StorageSlot4" parent="Control/StorageGrid" unique_id=133304524 instance=ExtResource("9_krqbg")]
+layout_mode = 2
+
+[node name="StorageSlot5" parent="Control/StorageGrid" unique_id=272083573 instance=ExtResource("9_krqbg")]
+layout_mode = 2
 
 [editable path="Control/InventoryGrid"]

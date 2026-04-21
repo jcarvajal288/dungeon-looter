@@ -12,7 +12,7 @@ func _transition_room(next_room_path: String, entry_id: String) -> void:
 	current_room.queue_free()
 	var room = load(next_room_path).instantiate()
 	current_room = room
-	get_parent().call_deferred("add_child", room)
+	get_parent().call_deferred("add_room", room)
 
 	var target_position = room.get_entry_point(entry_id)
 	var is_obstructed = true
@@ -36,4 +36,4 @@ func check_for_collisions_at(pos: Vector2) -> bool:
 
 func set_room(room: Room) -> void:
 	current_room = room
-	get_parent().add_child(room)
+	get_parent().call_deferred("add_room", room)

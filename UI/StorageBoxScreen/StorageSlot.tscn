@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://03wr5jqqawpa"]
+
+[ext_resource type="Script" uid="uid://clbv80pkeggaj" path="res://UI/StorageBoxScreen/storage_slot.gd" id="1_67umh"]
+
+[node name="StorageSlot" type="HBoxContainer" unique_id=1428203888]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -158.0
+offset_bottom = -256.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_67umh")
+
+[node name="ItemImage" type="TextureRect" parent="." unique_id=226857594]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="." unique_id=2143075404]
+layout_mode = 2
+size_flags_horizontal = 3

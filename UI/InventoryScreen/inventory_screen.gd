@@ -20,4 +20,7 @@ func toggle_inventory() -> void:
 	control.visible = !control.visible
 	if control.visible:
 		$Control/InventoryGrid.refresh(inventory)
+		Global.toggle_pause.emit(true)
+	else:
+		Global.toggle_pause.emit(false)
 	#get_tree().paused = control.visible # this needs to pause only the game, not everything

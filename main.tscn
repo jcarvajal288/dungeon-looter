@@ -7,16 +7,20 @@
 [ext_resource type="PackedScene" uid="uid://d0clx0vq8j1a2" path="res://UI/FollowPlayerCamera/FollowPlayerCamera.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dh4l4kix608b2" path="res://Levels/Components/RoomManager/RoomManager.tscn" id="4_1bvp3"]
 
-[node name="Node2D" type="Node2D" unique_id=2090323297]
+[node name="Main" type="Node2D" unique_id=2090323297]
+process_mode = 3
 y_sort_enabled = true
 script = ExtResource("1_1bvp3")
 starting_room = ExtResource("2_0xm2m")
 storage_box_screen = ExtResource("3_7mycd")
 
-[node name="Ranger" parent="." unique_id=231123919 instance=ExtResource("1_ig7tw")]
+[node name="RoomManager" parent="." unique_id=167211916 instance=ExtResource("4_1bvp3")]
+
+[node name="Gameplay" type="Node" parent="." unique_id=465686607]
+process_mode = 1
+
+[node name="Ranger" parent="Gameplay" unique_id=231123919 instance=ExtResource("1_ig7tw")]
 z_index = 5
 position = Vector2(103, 67)
 
-[node name="FollowPlayerCamera" parent="." unique_id=1706340102 instance=ExtResource("3_h2yge")]
-
-[node name="RoomManager" parent="." unique_id=167211916 instance=ExtResource("4_1bvp3")]
+[node name="FollowPlayerCamera" parent="Gameplay" unique_id=1706340102 instance=ExtResource("3_h2yge")]
