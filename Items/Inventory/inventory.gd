@@ -20,6 +20,14 @@ func add_item(item_data: ItemData) -> bool:
 	return false
 
 
+func add_inventory_item(inventory_item: InventoryItem, index: int) -> bool: 
+	if items[index] == null:
+		items[index] = inventory_item
+		return true
+	else:
+		return false
+
+
 func remove_item(index: int) -> InventoryItem:
 	var item = items[index]
 	items[index] = null

@@ -13,3 +13,7 @@ func refresh(storage: Storage) -> void:
 	for i in range(min(storage.items.size(), slots.size())):
 		if storage.items[i] != null:
 			slots[i].update_slot(storage.items[i].item_data)
+
+
+func remove_item(item_index: int) -> void:
+	slots[item_index].clear()
