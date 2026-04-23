@@ -1,16 +1,16 @@
 class_name Inventory extends Resource
 
-var inventory_size = 8
+var size = 8
 var items = []
 
 
 func _init() -> void:
-	items.resize(inventory_size)
+	items.resize(size)
 	items.fill(null)
 
 
 func add_item(item_data: ItemData) -> bool:
-	for i in range(inventory_size):
+	for i in range(size):
 		if items[i] == null:
 			var item = InventoryItem.new()
 			item.item_data = item_data
@@ -32,3 +32,7 @@ func remove_item(index: int) -> InventoryItem:
 	var item = items[index]
 	items[index] = null
 	return item
+
+
+func has_item(index: int) -> bool:
+	return index >= 0 and index < items.size() and items[index] != null

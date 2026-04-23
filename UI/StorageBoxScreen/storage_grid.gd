@@ -9,7 +9,7 @@ func _ready() -> void:
 			slots.append(child)
 
 
-func refresh(storage: Storage) -> void:
+func refresh(storage: Inventory) -> void:
 	for i in range(min(storage.items.size(), slots.size())):
 		if storage.items[i] != null:
 			slots[i].update_slot(storage.items[i].item_data)

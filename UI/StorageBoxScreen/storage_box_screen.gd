@@ -4,7 +4,7 @@ const INVENTORY_TOP_LEFT = Vector2(222, 37)
 const INVENTORY_SELECTOR_SIDE = 33
 
 @export var inventory: Inventory
-@export var storage: Storage
+@export var storage: Inventory
 
 @onready var control = $Control
 @onready var inventory_selector: TextureRect = $Control/InventorySelector
@@ -110,7 +110,7 @@ func handle_storage_selection(event: InputEvent) -> void:
 
 func handle_moving_to_storage(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
-		storage.add_item(get_selected_inventory_item(), selected_storage_slot)
+		storage.add_inventory_item(get_selected_inventory_item(), selected_storage_slot)
 		inventory_grid.refresh(inventory)
 		storage_grid.refresh(storage)
 		change_state(MenuState.SELECTING_STORAGE)
