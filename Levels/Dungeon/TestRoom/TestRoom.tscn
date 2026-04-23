@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cwc5urnfwtwji" path="res://Levels/Components/RoomTransition/RoomTransition.tscn" id="3_jid5c"]
 [ext_resource type="PackedScene" uid="uid://5tcf6map105b" path="res://Items/Key/KeySmall.tscn" id="4_8ptlu"]
 [ext_resource type="PackedScene" uid="uid://bvb8jjer7ykoa" path="res://Levels/Outside/Props/WagonStorageBox/WagonStorageBox.tscn" id="5_18xev"]
+[ext_resource type="PackedScene" uid="uid://bgojxcppa7trh" path="res://Items/GoldPile/GoldPile.tscn" id="6_imwwq"]
 
 [node name="TestRoom" type="Node2D" unique_id=425892536]
 y_sort_enabled = true
@@ -46,6 +47,9 @@ position = Vector2(200, 88)
 
 [node name="WagonStorageBox" parent="." unique_id=365739491 instance=ExtResource("5_18xev")]
 position = Vector2(151, 143)
+
+[node name="GoldPile" parent="." unique_id=1141625304 instance=ExtResource("6_imwwq")]
+position = Vector2(200, 120)
 
 [editable path="EasternExit"]
 [editable path="ExitToOutside"]

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bgojxcppa7trh"]
+
+[ext_resource type="Script" uid="uid://biqlbke5mul2h" path="res://Items/item.gd" id="1_m38ns"]
+[ext_resource type="Texture2D" uid="uid://ckq80dsrqjkji" path="res://Items/GoldPile/_art/goldpile_small.png" id="2_1vbd2"]
+[ext_resource type="Resource" uid="uid://bvk7mexda4yii" path="res://Items/GoldPile/GoldPileData.tres" id="2_di8g8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_di8g8"]
+
+[node name="GoldPile" type="Area2D" unique_id=1141625304]
+script = ExtResource("1_m38ns")
+item_data = ExtResource("2_di8g8")
+metadata/_custom_type_script = "uid://biqlbke5mul2h"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=482804802]
+texture = ExtResource("2_1vbd2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1036788773]
+shape = SubResource("CircleShape2D_di8g8")
+debug_color = Color(0.6, 0, 0.7019608, 0.41960785)

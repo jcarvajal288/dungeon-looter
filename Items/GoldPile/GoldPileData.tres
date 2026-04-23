@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bvk7mexda4yii"]
+
+[ext_resource type="Texture2D" uid="uid://1ut51vakagt4" path="res://Items/GoldPile/_art/goldpile_large.png" id="1_351ma"]
+[ext_resource type="Script" uid="uid://c033c2hyxuv6k" path="res://Items/item_data.gd" id="2_l60gb"]
+[ext_resource type="Texture2D" uid="uid://ckq80dsrqjkji" path="res://Items/GoldPile/_art/goldpile_small.png" id="3_hj102"]
+
+[resource]
+script = ExtResource("2_l60gb")
+name = "Gold"
+description = "A pile of gold coins"
+small_icon = ExtResource("3_hj102")
+large_icon = ExtResource("1_351ma")
+metadata/_custom_type_script = "uid://c033c2hyxuv6k"

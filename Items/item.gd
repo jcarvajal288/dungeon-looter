@@ -1,5 +1,7 @@
 class_name Item extends Area2D
 
+@export var item_data: ItemData
+
 var item_code = 0
 
 func _ready() -> void:

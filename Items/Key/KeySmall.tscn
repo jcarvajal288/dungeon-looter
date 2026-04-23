@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://5tcf6map105b"]
 
 [ext_resource type="Texture2D" uid="uid://sj3xr6ok7e0v" path="res://Items/Key/_art/key_small.png" id="1_csago"]
-[ext_resource type="Script" uid="uid://kbvbwabt6omj" path="res://Items/Key/key_small.gd" id="1_hq4k1"]
+[ext_resource type="Script" uid="uid://biqlbke5mul2h" path="res://Items/item.gd" id="1_hq4k1"]
 [ext_resource type="Resource" uid="uid://bw7ffuyvifd6y" path="res://Items/Key/KeyData.tres" id="2_3prvl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hq4k1"]
@@ -13,9 +13,9 @@ script = ExtResource("1_hq4k1")
 item_data = ExtResource("2_3prvl")
 metadata/_custom_type_script = "uid://biqlbke5mul2h"
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1296212335]
+texture = ExtResource("1_csago")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=111375434]
 shape = SubResource("CircleShape2D_hq4k1")
 debug_color = Color(0.6, 0, 0.7019608, 0.41960785)
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1296212335]
-texture = ExtResource("1_csago")
