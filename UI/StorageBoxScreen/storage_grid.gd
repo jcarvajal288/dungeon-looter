@@ -2,6 +2,8 @@ class_name StorageGrid extends GridContainer
 
 var slots: Array[StorageSlot]
 
+@onready var top_slot_index = 0
+
 
 func _ready() -> void:
 	for child in get_children():
@@ -17,3 +19,7 @@ func refresh(storage: Inventory) -> void:
 
 func remove_item(item_index: int) -> void:
 	slots[item_index].clear()
+
+
+func selected_storage_index() -> int:
+	return top_slot_index + 2

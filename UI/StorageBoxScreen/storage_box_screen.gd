@@ -10,7 +10,6 @@ const INVENTORY_SELECTOR_SIDE = 33
 @onready var inventory_selector: TextureRect = $Control/InventorySelector
 @onready var storage_box_selector: TextureRect = $Control/StorageBoxSelector
 @onready var selected_inventory_slot: Vector2i = Vector2i(0, 0)
-@onready var selected_storage_slot: int = 2
 @onready var inventory_grid = $Control/InventoryGrid
 @onready var storage_grid = $Control/StorageGrid
 @onready var item_info = $Control/ItemInfo
@@ -50,7 +49,7 @@ func _input(event: InputEvent) -> void:
 			item_info.update(inventory.items[slot_index])
 		MenuState.SELECTING_STORAGE:
 			handle_storage_selection(event)
-			item_info.update(storage.items[selected_storage_slot])
+			item_info.update(storage.items[storage_grid.selected_storage_index()])
 		MenuState.MOVING_TO_INVENTORY:
 			handle_inventory_selection(event)
 		MenuState.MOVING_TO_STORAGE:
@@ -104,13 +103,13 @@ func handle_storage_selection(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_right"):
 		change_state(MenuState.SELECTING_INVENTORY)
 	elif event.is_action_pressed("interact"):
-		if storage.has_item(selected_storage_slot):
+		if storage.has_item(storage_grid.selected_storage_index()):
 			change_state(MenuState.MOVING_TO_INVENTORY)
 
 
 func handle_moving_to_storage(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
-		storage.add_inventory_item(get_selected_inventory_item(), selected_storage_slot)
+		storage.add_inventory_item(get_selected_inventory_item(), storage_grid.selected_storage_index())
 		inventory_grid.refresh(inventory)
 		storage_grid.refresh(storage)
 		change_state(MenuState.SELECTING_STORAGE)
@@ -124,9 +123,9 @@ func get_selected_inventory_item() -> InventoryItem:
 
 
 func get_selected_storage_item() -> InventoryItem:
-	var item = storage.remove_item(selected_storage_slot)
+	var item = storage.remove_item(storage_grid.selected_storage_index())
 	if item:
-		storage_grid.remove_item(selected_storage_slot)
+		storage_grid.remove_item(storage_grid.selected_storage_index())
 	return item
 
 
