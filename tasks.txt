@@ -14,7 +14,7 @@ x outside with cart and storage
     x move inventory focus around
     x move item from inventory to storage
     x move item from storage to inventory
-    * refactor into proper state machine
+    x refactor into proper state machine
     * consolidate inventory and storage data structures
     * support moving multiple items between storage and inventory
 * ending game and calculating value

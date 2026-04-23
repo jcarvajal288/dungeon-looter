@@ -15,13 +15,13 @@ const INVENTORY_SELECTOR_SIDE = 33
 @onready var storage_grid = $Control/StorageGrid
 @onready var item_info = $Control/ItemInfo
 
-enum States {
+enum MenuState {
 	SELECTING_INVENTORY,
 	SELECTING_STORAGE,
 	MOVING_TO_STORAGE,
 	MOVING_TO_INVENTORY
 }
-@onready var state: States = States.SELECTING_INVENTORY
+@onready var current_state: MenuState = MenuState.SELECTING_INVENTORY
 
 func _ready() -> void:
 	inventory_selector.position = INVENTORY_TOP_LEFT
@@ -43,20 +43,34 @@ func toggle_screen() -> void:
 
 
 func _input(event: InputEvent) -> void:
-	if state == States.SELECTING_INVENTORY or state == States.MOVING_TO_INVENTORY:
-		handle_inventory_selection(event)
-	elif state == States.SELECTING_STORAGE:
-		handle_storage_selection(event)
-	elif state == States.MOVING_TO_STORAGE:
-		handle_moving_to_storage(event)
+	match current_state:
+		MenuState.SELECTING_INVENTORY:
+			handle_inventory_selection(event)
+			var slot_index = selected_inventory_slot.y * 2 + selected_inventory_slot.x
+			item_info.update(inventory.items[slot_index])
+		MenuState.SELECTING_STORAGE:
+			handle_storage_selection(event)
+			item_info.update(storage.items[selected_storage_slot])
+		MenuState.MOVING_TO_INVENTORY:
+			handle_inventory_selection(event)
+		MenuState.MOVING_TO_STORAGE:
+			handle_moving_to_storage(event)
 	var new_x = INVENTORY_TOP_LEFT.x + selected_inventory_slot.x * INVENTORY_SELECTOR_SIDE
 	var new_y = INVENTORY_TOP_LEFT.y + selected_inventory_slot.y * INVENTORY_SELECTOR_SIDE
 	inventory_selector.position = Vector2(new_x, new_y)
-	if state == States.SELECTING_INVENTORY:
-		var slot_index = selected_inventory_slot.y * 2 + selected_inventory_slot.x
-		item_info.update(inventory.items[slot_index])
-	elif state == States.SELECTING_STORAGE:
-		item_info.update(storage.items[selected_storage_slot])
+
+
+func change_state(new_state: MenuState) -> void:
+	current_state = new_state
+	match current_state:
+		MenuState.SELECTING_INVENTORY:
+			focus_inventory()
+		MenuState.SELECTING_STORAGE:
+			focus_storage_box()
+		MenuState.MOVING_TO_INVENTORY:
+			focus_inventory()
+		MenuState.MOVING_TO_STORAGE:
+			focus_both()
 
 
 func handle_inventory_selection(event: InputEvent) -> void:
@@ -64,8 +78,7 @@ func handle_inventory_selection(event: InputEvent) -> void:
 		control.visible = false
 	elif event.is_action_pressed("ui_left"):
 		if selected_inventory_slot.x == 0:
-			focus_storage_box()
-			state = States.SELECTING_STORAGE
+			change_state(MenuState.SELECTING_STORAGE)
 		else:
 			selected_inventory_slot.x -= 1
 	elif event.is_action_pressed("ui_right") and selected_inventory_slot.x == 0:
@@ -75,27 +88,24 @@ func handle_inventory_selection(event: InputEvent) -> void:
 	elif event.is_action_pressed("ui_down") and selected_inventory_slot.y != 3:
 		selected_inventory_slot.y += 1
 	elif event.is_action_pressed("interact"):
-		if state == States.SELECTING_INVENTORY:
-			focus_both()
-			state = States.MOVING_TO_STORAGE
-		elif state == States.MOVING_TO_INVENTORY:
+		if current_state == MenuState.SELECTING_INVENTORY:
+			change_state(MenuState.MOVING_TO_STORAGE)
+		elif current_state == MenuState.MOVING_TO_INVENTORY:
 			var inventory_slot_index = selected_inventory_slot.y * 2 + selected_inventory_slot.x
 			var item = get_selected_storage_item()
 			if item:
 				inventory.add_inventory_item(item, inventory_slot_index)
 				inventory_grid.refresh(inventory)
 				storage_grid.refresh(storage)
-				state = States.SELECTING_INVENTORY
+				change_state(MenuState.SELECTING_INVENTORY)
 
 
 func handle_storage_selection(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_right"):
-		focus_inventory()
-		state = States.SELECTING_INVENTORY
+		change_state(MenuState.SELECTING_INVENTORY)
 	elif event.is_action_pressed("interact"):
 		if storage.has_item(selected_storage_slot):
-			state = States.MOVING_TO_INVENTORY
-			focus_inventory()
+			change_state(MenuState.MOVING_TO_INVENTORY)
 
 
 func handle_moving_to_storage(event: InputEvent) -> void:
@@ -103,8 +113,7 @@ func handle_moving_to_storage(event: InputEvent) -> void:
 		storage.add_item(get_selected_inventory_item(), selected_storage_slot)
 		inventory_grid.refresh(inventory)
 		storage_grid.refresh(storage)
-		state = States.SELECTING_STORAGE
-		focus_storage_box()
+		change_state(MenuState.SELECTING_STORAGE)
 
 
 func get_selected_inventory_item() -> InventoryItem:
