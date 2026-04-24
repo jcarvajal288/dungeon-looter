@@ -4,7 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://6suddyqwtq3b" path="res://UI/InventoryScreen/_art/base.png" id="1_v6q66"]
 [ext_resource type="Resource" uid="uid://je3mw8g6sr5r" path="res://Items/Inventory/inventory.tres" id="2_bss63"]
 [ext_resource type="PackedScene" uid="uid://clsiylnl7ar11" path="res://UI/InventoryScreen/InventoryGrid.tscn" id="3_0dd31"]
+[ext_resource type="Texture2D" uid="uid://cq264enbbdpbg" path="res://UI/InventoryScreen/_art/InventorySelector.png" id="4_7tt40"]
 [ext_resource type="PackedScene" uid="uid://bygvlwo44c1ya" path="res://UI/InventoryScreen/ItemInfo.tscn" id="5_871pb"]
+[ext_resource type="Script" uid="uid://bf8iogclhaigs" path="res://UI/InventoryScreen/item_info.gd" id="7_1w32s"]
 
 [node name="InventoryScreen" type="CanvasLayer" unique_id=1798393088]
 script = ExtResource("1_0h4yy")
@@ -16,11 +18,19 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextureRect" type="TextureRect" parent="Control" unique_id=501316274]
+[node name="BaseTexture" type="TextureRect" parent="Control" unique_id=501316274]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 320.0
+offset_bottom = 288.0
 texture = ExtResource("1_v6q66")
+
+[node name="InventorySelector" type="TextureRect" parent="Control" unique_id=1408464540]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 37.0
+offset_right = 262.0
+offset_bottom = 77.0
+texture = ExtResource("4_7tt40")
 
 [node name="InventoryGrid" parent="Control" unique_id=903042863 instance=ExtResource("3_0dd31")]
 layout_mode = 0
@@ -40,3 +50,4 @@ offset_left = 28.0
 offset_top = 233.0
 offset_right = 192.0
 offset_bottom = 265.0
+script = ExtResource("7_1w32s")

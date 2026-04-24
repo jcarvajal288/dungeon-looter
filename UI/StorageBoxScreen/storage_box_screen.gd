@@ -42,6 +42,9 @@ func toggle_screen() -> void:
 
 
 func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel") and control.visible:
+		toggle_screen()
+		return
 	match current_state:
 		MenuState.SELECTING_INVENTORY:
 			handle_inventory_selection(event)
@@ -73,9 +76,7 @@ func change_state(new_state: MenuState) -> void:
 
 
 func handle_inventory_selection(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel") and control.visible:
-		control.visible = false
-	elif event.is_action_pressed("ui_left"):
+	if event.is_action_pressed("ui_left"):
 		if selected_inventory_slot.x == 0:
 			change_state(MenuState.SELECTING_STORAGE)
 		else:

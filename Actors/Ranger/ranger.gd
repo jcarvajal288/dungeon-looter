@@ -11,6 +11,11 @@ func _ready() -> void:
 	z_index =  Global.RenderOrder.PLAYER
 
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("toggle_inventory"):
+		Global.toggle_inventory_screen.emit()
+
+
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("interact"):
 		check_for_item()
