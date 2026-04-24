@@ -44,15 +44,19 @@ func toggle_screen() -> void:
 func _input(event: InputEvent) -> void:
 	match current_state:
 		MenuState.SELECTING_INVENTORY:
+			print("SELECTING_INVENTORY")
 			handle_inventory_selection(event)
 			var slot_index = selected_inventory_slot.y * 2 + selected_inventory_slot.x
 			item_info.update(inventory.items[slot_index])
 		MenuState.SELECTING_STORAGE:
+			print("SELECTING_STORAGE")
 			handle_storage_selection(event)
 			item_info.update(storage.items[storage_grid.selected_storage_index()])
 		MenuState.MOVING_TO_INVENTORY:
+			print("MOVING_TO_INVENTORY")
 			handle_inventory_selection(event)
 		MenuState.MOVING_TO_STORAGE:
+			print("MOVING_TO_STORAGE")
 			handle_moving_to_storage(event)
 	var new_x = INVENTORY_TOP_LEFT.x + selected_inventory_slot.x * INVENTORY_SELECTOR_SIDE
 	var new_y = INVENTORY_TOP_LEFT.y + selected_inventory_slot.y * INVENTORY_SELECTOR_SIDE
@@ -100,6 +104,22 @@ func handle_inventory_selection(event: InputEvent) -> void:
 
 
 func handle_storage_selection(event: InputEvent) -> void:
+	move_storage_selector(event)
+	if event.is_action_pressed("interact"):
+		if storage.has_item(storage_grid.selected_storage_index()):
+			change_state(MenuState.MOVING_TO_INVENTORY)
+
+
+func handle_moving_to_storage(event: InputEvent) -> void:
+	move_storage_selector(event)	
+	if event.is_action_pressed("interact"):
+		storage.add_inventory_item(get_selected_inventory_item(), storage_grid.selected_storage_index())
+		inventory_grid.refresh(inventory)
+		storage_grid.refresh(storage)
+		change_state(MenuState.SELECTING_STORAGE)
+
+
+func move_storage_selector(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_right"):
 		change_state(MenuState.SELECTING_INVENTORY)
 	elif event.is_action_pressed("ui_up"):
@@ -108,18 +128,6 @@ func handle_storage_selection(event: InputEvent) -> void:
 	elif event.is_action_pressed("ui_down"):
 		storage_grid.change_storage_selection(1)
 		storage_grid.refresh(storage)
-	elif event.is_action_pressed("interact"):
-		if storage.has_item(storage_grid.selected_storage_index()):
-			change_state(MenuState.MOVING_TO_INVENTORY)
-
-
-func handle_moving_to_storage(event: InputEvent) -> void:
-	if event.is_action_pressed("interact"):
-		storage.add_inventory_item(get_selected_inventory_item(), storage_grid.selected_storage_index())
-		inventory_grid.refresh(inventory)
-		storage_grid.refresh(storage)
-		change_state(MenuState.SELECTING_STORAGE)
-
 
 func get_selected_inventory_item() -> InventoryItem:
 	var slot_index = selected_inventory_slot.y * 2 + selected_inventory_slot.x

@@ -1,7 +1,2 @@
-* Storage screen does not scroll if trying to move item into existing storage slot
-    - pick up both items
-    - move key to slot
-    - move back to inventory and select gold
-    - storage screen is frozen
-    - works correctly if you add key, scroll down a slot, then move back to inventory to pick up gold
+No open bugs!
 
