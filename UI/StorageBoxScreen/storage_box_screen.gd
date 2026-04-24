@@ -44,19 +44,15 @@ func toggle_screen() -> void:
 func _input(event: InputEvent) -> void:
 	match current_state:
 		MenuState.SELECTING_INVENTORY:
-			print("SELECTING_INVENTORY")
 			handle_inventory_selection(event)
 			var slot_index = selected_inventory_slot.y * 2 + selected_inventory_slot.x
 			item_info.update(inventory.items[slot_index])
 		MenuState.SELECTING_STORAGE:
-			print("SELECTING_STORAGE")
 			handle_storage_selection(event)
 			item_info.update(storage.items[storage_grid.selected_storage_index()])
 		MenuState.MOVING_TO_INVENTORY:
-			print("MOVING_TO_INVENTORY")
 			handle_inventory_selection(event)
 		MenuState.MOVING_TO_STORAGE:
-			print("MOVING_TO_STORAGE")
 			handle_moving_to_storage(event)
 	var new_x = INVENTORY_TOP_LEFT.x + selected_inventory_slot.x * INVENTORY_SELECTOR_SIDE
 	var new_y = INVENTORY_TOP_LEFT.y + selected_inventory_slot.y * INVENTORY_SELECTOR_SIDE
