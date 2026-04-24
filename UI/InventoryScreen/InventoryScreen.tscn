@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://6suddyqwtq3b" path="res://UI/InventoryScreen/_art/base.png" id="1_v6q66"]
 [ext_resource type="Resource" uid="uid://je3mw8g6sr5r" path="res://Items/Inventory/inventory.tres" id="2_bss63"]
 [ext_resource type="PackedScene" uid="uid://clsiylnl7ar11" path="res://UI/InventoryScreen/InventoryGrid.tscn" id="3_0dd31"]
+[ext_resource type="PackedScene" uid="uid://bygvlwo44c1ya" path="res://UI/InventoryScreen/ItemInfo.tscn" id="5_871pb"]
 
 [node name="InventoryScreen" type="CanvasLayer" unique_id=1798393088]
 script = ExtResource("1_0h4yy")
@@ -32,3 +33,10 @@ offset_right = 292.0
 offset_bottom = 173.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="ItemInfo" parent="Control" unique_id=1452221066 instance=ExtResource("5_871pb")]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 233.0
+offset_right = 192.0
+offset_bottom = 265.0
