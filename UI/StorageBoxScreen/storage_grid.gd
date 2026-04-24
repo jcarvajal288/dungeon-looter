@@ -39,6 +39,6 @@ func selected_storage_index() -> int:
 func change_storage_selection(index_change: int) -> void:
 	top_slot_index += index_change
 	if top_slot_index < 0:
-		top_slot_index = slots.size()
+		top_slot_index = slots.size() - 1
 	elif top_slot_index >= slots.size():
 		top_slot_index = 0

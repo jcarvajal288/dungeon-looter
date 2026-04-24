@@ -5,4 +5,3 @@
     - storage screen is frozen
     - works correctly if you add key, scroll down a slot, then move back to inventory to pick up gold
 
-* Storage takes an extra button press to scroll past beginning of storage list
