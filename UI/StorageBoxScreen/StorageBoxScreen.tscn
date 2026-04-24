@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ct5rhjfocdrd" path="res://UI/StorageBoxScreen/_art/StorageBoxBase.png" id="1_qmyi4"]
 [ext_resource type="Resource" uid="uid://je3mw8g6sr5r" path="res://Items/Inventory/inventory.tres" id="2_lr1bg"]
 [ext_resource type="Resource" uid="uid://cop6i1iyjj5lm" path="res://Items/StorageBox/storage.tres" id="3_d1wjq"]
-[ext_resource type="Texture2D" uid="uid://cq264enbbdpbg" path="res://UI/StorageBoxScreen/_art/InventorySelector.png" id="3_lr1bg"]
+[ext_resource type="Texture2D" uid="uid://cq264enbbdpbg" path="res://UI/InventoryScreen/_art/InventorySelector.png" id="3_lr1bg"]
 [ext_resource type="Texture2D" uid="uid://co7qdi8uk7qa6" path="res://UI/StorageBoxScreen/_art/StorageBoxSelector.png" id="4_lwxnu"]
 [ext_resource type="PackedScene" uid="uid://clsiylnl7ar11" path="res://UI/InventoryScreen/InventoryGrid.tscn" id="6_lwxnu"]
 [ext_resource type="Script" uid="uid://dcbiou8vvqrgk" path="res://UI/StorageBoxScreen/storage_grid.gd" id="8_qpwxg"]

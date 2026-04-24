@@ -17,7 +17,8 @@ x storage box screen
     x refactor into proper state machine
     x consolidate inventory and storage data structures
     x support moving multiple items between storage and inventory
-* add value to items and show in inventory and storage screens
+x add value to items and show in inventory and storage screens
+* add cursor selection to inventory screen
 * ending game and calculating final value
 * key and lock puzzle
 * multiple item puzzle
