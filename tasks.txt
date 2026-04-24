@@ -8,7 +8,7 @@ x inventory screen
 	x show empty slots
 	x putting item into inventory
 x outside with cart and storage
-+ storage box screen
+x storage box screen
     x open storage box screen screen when interacting with cart
     x switch between inventory focus and storage focus
     x move inventory focus around
@@ -16,8 +16,9 @@ x outside with cart and storage
     x move item from storage to inventory
     x refactor into proper state machine
     x consolidate inventory and storage data structures
-    * support moving multiple items between storage and inventory
-* ending game and calculating value
+    x support moving multiple items between storage and inventory
+* add value to items and show in inventory and storage screens
+* ending game and calculating final value
 * key and lock puzzle
 * multiple item puzzle
 * simple patrolling enemy

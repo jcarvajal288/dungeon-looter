@@ -8,6 +8,7 @@
 script = ExtResource("1_fc74k")
 name = "Key"
 description = "A Small Key"
+value = 200
 small_icon = ExtResource("3_c8kr3")
 large_icon = ExtResource("1_c8kr3")
 metadata/_custom_type_script = "uid://c033c2hyxuv6k"

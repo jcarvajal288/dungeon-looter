@@ -8,6 +8,7 @@
 script = ExtResource("2_l60gb")
 name = "Gold"
 description = "A pile of gold coins"
+value = 2000
 small_icon = ExtResource("3_hj102")
 large_icon = ExtResource("1_351ma")
 metadata/_custom_type_script = "uid://c033c2hyxuv6k"
