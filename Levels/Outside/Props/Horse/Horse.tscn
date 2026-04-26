@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cr6evs8x2mlko" path="res://Levels/Outside/Props/Horse/horse.gd" id="1_w1hr1"]
 [ext_resource type="Texture2D" uid="uid://cxasih6l62nf8" path="res://Levels/Outside/Props/Horse/_art/HorseIdle.png" id="2_hl1qh"]
+[ext_resource type="PackedScene" uid="uid://bygou044la11u" path="res://Levels/Components/InteractionArea/InteractionArea.tscn" id="3_hl1qh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hto5m"]
 atlas = ExtResource("2_hl1qh")
@@ -92,15 +93,15 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 2.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_exsmo"]
 radius = 4.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w1hr1"]
-radius = 8.0
-height = 40.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hto5m"]
+radius = 7.0
+height = 36.0
 
 [node name="Horse" type="StaticBody2D" unique_id=513573540]
 y_sort_enabled = true
@@ -109,6 +110,7 @@ metadata/_custom_type_script = "uid://b416mdr3pkk6w"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1935671948]
 sprite_frames = SubResource("SpriteFrames_c7oqs")
+autoplay = "default"
 frame = 4
 frame_progress = 0.51824266
 
@@ -117,11 +119,11 @@ position = Vector2(0, 2)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_exsmo")
 
-[node name="InteractionArea" type="Area2D" parent="." unique_id=775975492]
-collision_layer = 5
+[node name="InteractionArea" parent="." unique_id=532246333 instance=ExtResource("3_hl1qh")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1885998467]
+[node name="CollisionShape2D" parent="InteractionArea" index="0" unique_id=612497491]
 position = Vector2(0, 2)
 rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_w1hr1")
-debug_color = Color(0.6, 0, 0.7019608, 0.41960785)
+shape = SubResource("CapsuleShape2D_hto5m")
+
+[editable path="InteractionArea"]
