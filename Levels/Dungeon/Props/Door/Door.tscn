@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dr83mbto5bawq"]
 
-[ext_resource type="Script" uid="uid://b416mdr3pkk6w" path="res://Levels/prop.gd" id="1_e4uyl"]
+[ext_resource type="Script" uid="uid://dsq7q74hey284" path="res://Levels/Dungeon/Props/Door/door.gd" id="1_kl51c"]
 [ext_resource type="Texture2D" uid="uid://bifcgbt8kclyk" path="res://Levels/Dungeon/Props/Door/_art/doors.png" id="2_eh160"]
 [ext_resource type="PackedScene" uid="uid://bygou044la11u" path="res://Levels/Components/InteractionArea/InteractionArea.tscn" id="3_kl51c"]
 
@@ -10,7 +10,7 @@ size = Vector2(16, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jvdr7"]
 
 [node name="Door" type="StaticBody2D" unique_id=1410673662]
-script = ExtResource("1_e4uyl")
+script = ExtResource("1_kl51c")
 metadata/_custom_type_script = "uid://b416mdr3pkk6w"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1227297331]
