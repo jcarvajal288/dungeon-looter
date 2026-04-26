@@ -1,2 +1,2 @@
-No open bugs!
+Dungeon Entrance rendered over player
 

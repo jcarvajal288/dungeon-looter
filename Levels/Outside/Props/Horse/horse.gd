@@ -1,0 +1,1 @@
+class_name Horse extends Prop

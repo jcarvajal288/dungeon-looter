@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bouaw5vwspud3" path="res://Levels/Outside/Props/DungeonEntrance/DungeonEntrance.tscn" id="3_mli8n"]
 [ext_resource type="PackedScene" uid="uid://cwc5urnfwtwji" path="res://Levels/Components/RoomTransition/RoomTransition.tscn" id="4_lpl2x"]
 [ext_resource type="PackedScene" uid="uid://bvb8jjer7ykoa" path="res://Levels/Outside/Props/WagonStorageBox/WagonStorageBox.tscn" id="5_702kf"]
+[ext_resource type="PackedScene" uid="uid://brhgqghhllcem" path="res://Levels/Outside/Props/Horse/Horse.tscn" id="6_rkhr3"]
 
 [node name="Camp" type="Node2D" unique_id=1228026603]
 y_sort_enabled = true
@@ -36,5 +37,8 @@ position = Vector2(0, 12)
 
 [node name="WagonStorageBox" parent="." unique_id=1178806714 instance=ExtResource("5_702kf")]
 position = Vector2(164, 157)
+
+[node name="Horse" parent="." unique_id=513573540 instance=ExtResource("6_rkhr3")]
+position = Vector2(223, 161)
 
 [editable path="TransitionToDungeon"]
