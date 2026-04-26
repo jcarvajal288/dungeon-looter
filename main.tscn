@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cf5xoryywwwyi" path="res://main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://thok4a87rm7p" path="res://Actors/Ranger/Ranger.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://cwytewg8al65p" path="res://Levels/Dungeon/TestRoom/TestRoom.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cwytewg8al65p" path="res://Levels/Dungeon/Rooms/TestRoom/TestRoom.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://d0clx0vq8j1a2" path="res://UI/FollowPlayerCamera/FollowPlayerCamera.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dh4l4kix608b2" path="res://Levels/Components/RoomManager/RoomManager.tscn" id="4_1bvp3"]
 
