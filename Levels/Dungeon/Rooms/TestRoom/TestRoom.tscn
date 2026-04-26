@@ -31,6 +31,11 @@ position = Vector2(6, 0)
 [node name="PlayerEntryPoint" parent="EasternExit" index="1" unique_id=1971202014]
 position = Vector2(-14, 0)
 
+[node name="Door" parent="EasternExit" unique_id=1410673662 instance=ExtResource("6_jt1n5")]
+position = Vector2(-18, 0)
+rotation = 1.5707964
+door_id = "TEST_ROOM_EASTERN_EXIT"
+
 [node name="ExitToOutside" parent="." unique_id=2018156008 instance=ExtResource("3_jid5c")]
 position = Vector2(158, 274)
 next_room_path = "res://Levels/Outside/Rooms/Camp/Camp.tscn"
@@ -47,10 +52,6 @@ position = Vector2(200, 88)
 
 [node name="GoldPile" parent="." unique_id=1141625304 instance=ExtResource("6_imwwq")]
 position = Vector2(200, 120)
-
-[node name="Door" parent="." unique_id=1410673662 instance=ExtResource("6_jt1n5")]
-position = Vector2(312, 136)
-rotation = 1.5707964
 
 [editable path="EasternExit"]
 [editable path="ExitToOutside"]

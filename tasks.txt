@@ -20,6 +20,7 @@ x storage box screen
 x add value to items and show in inventory and storage screens
 x add cursor selection to inventory screen
 x ending game and calculating final value
+x save door state between loads
 * key and lock puzzle
 * multiple item puzzle
 * simple patrolling enemy

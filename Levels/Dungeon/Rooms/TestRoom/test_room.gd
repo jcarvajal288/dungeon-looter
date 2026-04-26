@@ -1,5 +1,9 @@
 extends Room
 
+func _ready() -> void:
+	super()
+	$EasternExit/Door.set_closed_state(PersistentState.door_states["TEST_ROOM_EASTERN_EXIT"])
+
 
 func get_entry_point(entry_id: String) -> Vector2:
 	if entry_id == "EasternExit":

@@ -22,6 +22,7 @@ InventoryScreen="*uid://cy08k8bi1sxs2"
 Items="*uid://do7ebfqueybj"
 EndScreen="*uid://dlunu40kn8fye"
 StorageBoxScreen="*uid://cm6lsohd60ov7"
+PersistentState="*uid://d0rpptd00kxvg"
 
 [display]
 
