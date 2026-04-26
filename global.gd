@@ -18,6 +18,5 @@ enum CollisionLayer {
 signal bind_camera(rect: Rect2)
 signal toggle_pause(is_paused: bool)
 signal toggle_inventory_screen
-signal toggle_storage_box_screen
 signal transition_room(next_room_path: Node2D, entry_id: String)
 @warning_ignore_restore("unused_signal")

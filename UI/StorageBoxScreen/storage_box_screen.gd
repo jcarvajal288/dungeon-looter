@@ -3,6 +3,8 @@ extends CanvasLayer
 const INVENTORY_TOP_LEFT = Vector2(222, 37)
 const INVENTORY_SELECTOR_SIDE = 33
 
+signal toggle_storage_box_screen
+
 @export var inventory: Inventory
 @export var storage: Inventory
 
@@ -26,7 +28,7 @@ func _ready() -> void:
 	inventory_selector.position = INVENTORY_TOP_LEFT
 	storage_box_selector.visible = false
 	control.visible = false
-	Global.toggle_storage_box_screen.connect(toggle_screen)
+	toggle_storage_box_screen.connect(toggle_screen)
 	self.process_mode = Node.PROCESS_MODE_DISABLED
 
 

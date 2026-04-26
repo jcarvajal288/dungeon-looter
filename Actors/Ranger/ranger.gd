@@ -83,6 +83,6 @@ func check_for_item() -> void:
 				print("Inventory full")
 		elif node.name == "InteractionArea":
 			if node.get_parent() is WagonStorageBox:
-				Global.toggle_storage_box_screen.emit()
+				StorageBoxScreen.toggle_storage_box_screen.emit()
 			elif node.get_parent() is Horse:
 				EndScreen.end_game.emit()
