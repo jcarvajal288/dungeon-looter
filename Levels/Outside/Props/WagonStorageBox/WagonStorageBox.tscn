@@ -28,6 +28,7 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_jskay")
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=1495053743]
+y_sort_enabled = true
 collision_layer = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1124288559]

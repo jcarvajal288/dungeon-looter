@@ -14,8 +14,9 @@ starting_room = ExtResource("2_0xm2m")
 
 [node name="RoomManager" parent="." unique_id=167211916 instance=ExtResource("4_1bvp3")]
 
-[node name="Gameplay" type="Node" parent="." unique_id=465686607]
+[node name="Gameplay" type="Node2D" parent="." unique_id=414601850]
 process_mode = 1
+y_sort_enabled = true
 
 [node name="Ranger" parent="Gameplay" unique_id=231123919 instance=ExtResource("1_ig7tw")]
 z_index = 5
