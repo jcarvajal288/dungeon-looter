@@ -5,6 +5,8 @@ extends CanvasLayer
 const INVENTORY_TOP_LEFT = Vector2(222, 37)
 const INVENTORY_SELECTOR_SIDE = 33
 
+signal toggle_inventory_screen
+
 @onready var control = $Control
 @onready var item_info = $Control/ItemInfo
 @onready var selected_inventory_slot: Vector2i = Vector2i(0, 0)
@@ -13,7 +15,7 @@ const INVENTORY_SELECTOR_SIDE = 33
 
 func _ready() -> void:
 	control.visible = false
-	Global.toggle_inventory_screen.connect(toggle_inventory)
+	toggle_inventory_screen.connect(toggle_inventory)
 	self.process_mode = Node.PROCESS_MODE_DISABLED
 
 

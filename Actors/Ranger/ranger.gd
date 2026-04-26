@@ -13,7 +13,7 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("toggle_inventory"):
-		Global.toggle_inventory_screen.emit()
+		InventoryScreen.toggle_inventory_screen.emit()
 
 
 func _process(_delta: float) -> void:
