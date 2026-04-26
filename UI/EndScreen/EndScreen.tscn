@@ -2,9 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://d3jwnr5ukh8p3" path="res://UI/EndScreen/_art/EndScreenBase.png" id="1_4xxei"]
 [ext_resource type="Script" uid="uid://cyvmm3o5mie4t" path="res://UI/EndScreen/end_screen.gd" id="1_a630f"]
+[ext_resource type="Resource" uid="uid://cop6i1iyjj5lm" path="res://Items/StorageBox/storage.tres" id="2_q8mru"]
 
 [node name="EndScreen" type="CanvasLayer" unique_id=1748212277]
 script = ExtResource("1_a630f")
+storage = ExtResource("2_q8mru")
 
 [node name="Control" type="Control" parent="." unique_id=1544569979]
 layout_mode = 3

@@ -36,3 +36,11 @@ func remove_item(index: int) -> InventoryItem:
 
 func has_item(index: int) -> bool:
 	return index >= 0 and index < items.size() and items[index] != null
+
+
+func calculate_score() -> float:
+	var scores = items \
+		.filter(func(item): return item != null) \
+		.map(func(item): return [item.item_data.value, item.item_data.multiplier]) \
+	 	.reduce(func(totals, next): return [totals[0] + next[0], totals[1] * next[1]])
+	return scores[0] * scores[1]
