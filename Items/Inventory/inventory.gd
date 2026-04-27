@@ -34,8 +34,13 @@ func remove_item(index: int) -> InventoryItem:
 	return item
 
 
-func has_item(index: int) -> bool:
+func has_item_at_index(index: int) -> bool:
 	return index >= 0 and index < items.size() and items[index] != null
+
+
+func contains(item_data: ItemData) -> bool:
+	return items.filter(func(i): 
+		return i != null and i.item_data.name == item_data.name).size() > 0
 
 
 func calculate_score() -> int:

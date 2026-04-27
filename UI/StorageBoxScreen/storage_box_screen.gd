@@ -105,7 +105,7 @@ func handle_inventory_selection(event: InputEvent) -> void:
 func handle_storage_selection(event: InputEvent) -> void:
 	move_storage_selector(event)
 	if event.is_action_pressed("interact"):
-		if storage.has_item(storage_grid.selected_storage_index()):
+		if storage.has_item_at_index(storage_grid.selected_storage_index()):
 			change_state(MenuState.MOVING_TO_INVENTORY)
 
 

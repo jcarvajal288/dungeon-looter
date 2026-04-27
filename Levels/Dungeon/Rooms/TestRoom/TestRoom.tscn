@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dbq1p178gwgll" path="res://Levels/Dungeon/Rooms/TestRoom/test_room.gd" id="1_m558a"]
 [ext_resource type="PackedScene" uid="uid://cwc5urnfwtwji" path="res://Levels/Components/RoomTransition/RoomTransition.tscn" id="3_jid5c"]
 [ext_resource type="PackedScene" uid="uid://5tcf6map105b" path="res://Items/Key/KeySmall.tscn" id="4_8ptlu"]
+[ext_resource type="Resource" uid="uid://bw7ffuyvifd6y" path="res://Items/Key/KeyData.tres" id="5_1ibwy"]
 [ext_resource type="PackedScene" uid="uid://bgojxcppa7trh" path="res://Items/GoldPile/GoldPile.tscn" id="6_imwwq"]
 [ext_resource type="PackedScene" uid="uid://dr83mbto5bawq" path="res://Levels/Dungeon/Props/Door/Door.tscn" id="6_jt1n5"]
 
@@ -32,9 +33,10 @@ position = Vector2(6, 0)
 position = Vector2(-14, 0)
 
 [node name="Door" parent="EasternExit" unique_id=1410673662 instance=ExtResource("6_jt1n5")]
-position = Vector2(-18, 0)
+position = Vector2(-17, 0)
 rotation = 1.5707964
 door_id = "TEST_ROOM_EASTERN_EXIT"
+opened_by = ExtResource("5_1ibwy")
 
 [node name="ExitToOutside" parent="." unique_id=2018156008 instance=ExtResource("3_jid5c")]
 position = Vector2(158, 274)

@@ -1,6 +1,7 @@
 class_name Door extends Prop
 
 @export var door_id: String = ""
+@export var opened_by: ItemData = null
 
 @onready var closed_frame = $Sprite2D.frame
 @onready var open_frame = closed_frame + 8
@@ -13,7 +14,12 @@ func _ready() -> void:
 func on_interaction() -> void:
 	var is_closed = PersistentState.door_states[door_id]
 	if is_closed:
-		set_closed_state(false)
+		var is_locked = true if door_id != null else false
+		if not is_locked:
+			set_closed_state(false)
+		var has_key = Global.player.inventory.contains(opened_by)
+		if has_key:
+			set_closed_state(false)
 
 
 func set_closed_state(is_closed: bool) -> void:
