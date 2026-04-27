@@ -33,7 +33,7 @@ position = Vector2(6, 0)
 position = Vector2(-14, 0)
 
 [node name="Door" parent="EasternExit" unique_id=1410673662 instance=ExtResource("6_jt1n5")]
-position = Vector2(-17, 0)
+position = Vector2(-18, 0)
 rotation = 1.5707964
 door_id = "TEST_ROOM_EASTERN_EXIT"
 opened_by = ExtResource("5_1ibwy")
