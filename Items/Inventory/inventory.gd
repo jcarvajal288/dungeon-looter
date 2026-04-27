@@ -48,7 +48,4 @@ func calculate_score() -> int:
 		.filter(func(item): return item != null) \
 		.map(func(item): return [item.item_data.value, item.item_data.multiplier]) \
 	 	.reduce(func(totals, next): return [totals[0] + next[0], totals[1] * next[1]])
-	if scores:
-		return int(scores[0] * scores[1])
-	else:
-		return 0
+	return int(scores[0] * scores[1]) if scores else 0
