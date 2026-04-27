@@ -19,7 +19,10 @@ func on_interaction() -> void:
 			set_closed_state(false)
 		var has_key = Global.player.inventory.contains(opened_by)
 		if has_key:
+			NotificationScreen.show_message.emit("Unlocked the door with %s" % opened_by.name)
 			set_closed_state(false)
+		else:
+			NotificationScreen.show_message.emit("The door is locked")
 
 
 func set_closed_state(is_closed: bool) -> void:
