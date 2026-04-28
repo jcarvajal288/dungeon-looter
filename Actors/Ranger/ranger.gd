@@ -14,11 +14,9 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("toggle_inventory"):
 		InventoryScreen.toggle_inventory_screen.emit()
-
-
-func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("interact"):
+	elif event.is_action_pressed("interact"):
 		check_for_item()
+		get_viewport().set_input_as_handled()
 
 
 func _physics_process(_delta: float) -> void:

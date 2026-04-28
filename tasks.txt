@@ -22,7 +22,7 @@ x add cursor selection to inventory screen
 x ending game and calculating final value
 x save door state between loads
 x key and lock puzzle
-* dialog box when door is locked/unlocked
+x dialog box when door is locked/unlocked
 * multiple item puzzle
 * simple patrolling enemy
 * orthogonal attack animations

@@ -15,11 +15,11 @@ func _show_message(message: String) -> void:
 	label.text = message
 	$Control.visible = true
 	self.process_mode = Node.PROCESS_MODE_INHERIT
+	Global.toggle_pause.emit(true)
 
 
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact") or event.is_action_pressed("ui_cancel"):
+func _input(input: InputEvent) -> void:
+	if input.is_action_pressed("interact") or input.is_action_pressed("ui_cancel"):
 		$Control.visible = false
 		self.process_mode = Node.PROCESS_MODE_DISABLED
-
-
+		Global.toggle_pause.emit(false)
