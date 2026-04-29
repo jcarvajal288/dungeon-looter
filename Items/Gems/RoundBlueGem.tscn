@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bo81xgbrdlv6p"]
 
 [ext_resource type="Script" uid="uid://biqlbke5mul2h" path="res://Items/item.gd" id="1_o13nk"]
+[ext_resource type="Resource" uid="uid://b5hjqc803kam8" path="res://Items/Gems/round_blue_gem.tres" id="2_ngm3v"]
 [ext_resource type="Texture2D" uid="uid://bmk4vfpjb7k3d" path="res://Items/Gems/_art/RoundBlueGem_small.png" id="2_o13nk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m7pmn"]
@@ -8,6 +9,7 @@ radius = 6.0
 
 [node name="RoundGreenGem" type="Area2D" unique_id=1928515060]
 script = ExtResource("1_o13nk")
+item_data = ExtResource("2_ngm3v")
 metadata/_custom_type_script = "uid://biqlbke5mul2h"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=336774808]

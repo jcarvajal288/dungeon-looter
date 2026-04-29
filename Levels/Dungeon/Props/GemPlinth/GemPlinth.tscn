@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cxouw3i8psupd"]
+
+[ext_resource type="Script" uid="uid://b416mdr3pkk6w" path="res://Levels/prop.gd" id="1_nfoqs"]
+[ext_resource type="Texture2D" uid="uid://chpy215ogwanv" path="res://Levels/Dungeon/Props/GemPlinth/_art/GemPlinth.png" id="2_djlsq"]
+[ext_resource type="PackedScene" uid="uid://bygou044la11u" path="res://Levels/Components/InteractionArea/InteractionArea.tscn" id="3_25khk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25khk"]
+size = Vector2(20, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7em4l"]
+size = Vector2(24, 24)
+
+[node name="GemPlinth" type="StaticBody2D" unique_id=1009833574]
+script = ExtResource("1_nfoqs")
+metadata/_custom_type_script = "uid://b416mdr3pkk6w"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1212240137]
+y_sort_enabled = true
+texture = ExtResource("2_djlsq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1886962339]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_25khk")
+
+[node name="InteractionArea" parent="." unique_id=532246333 instance=ExtResource("3_25khk")]
+
+[node name="CollisionShape2D" parent="InteractionArea" index="0" unique_id=612497491]
+shape = SubResource("RectangleShape2D_7em4l")
+
+[editable path="InteractionArea"]

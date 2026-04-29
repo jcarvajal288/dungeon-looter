@@ -7,6 +7,10 @@
 [ext_resource type="Resource" uid="uid://bw7ffuyvifd6y" path="res://Items/Key/KeyData.tres" id="5_1ibwy"]
 [ext_resource type="PackedScene" uid="uid://bgojxcppa7trh" path="res://Items/GoldPile/GoldPile.tscn" id="6_imwwq"]
 [ext_resource type="PackedScene" uid="uid://dr83mbto5bawq" path="res://Levels/Dungeon/Props/Door/Door.tscn" id="6_jt1n5"]
+[ext_resource type="PackedScene" uid="uid://cxouw3i8psupd" path="res://Levels/Dungeon/Props/GemPlinth/GemPlinth.tscn" id="8_sw4ro"]
+[ext_resource type="PackedScene" uid="uid://bo81xgbrdlv6p" path="res://Items/Gems/RoundBlueGem.tscn" id="9_4jqnr"]
+[ext_resource type="PackedScene" uid="uid://dcg2r1e7s8r7x" path="res://Items/Gems/RoundGreenGem.tscn" id="10_hmxod"]
+[ext_resource type="PackedScene" uid="uid://du6skfvg158wh" path="res://Items/Gems/RoundRedGem.tscn" id="11_5hu64"]
 
 [node name="TestRoom" type="Node2D" unique_id=425892536]
 y_sort_enabled = true
@@ -54,6 +58,24 @@ position = Vector2(200, 88)
 
 [node name="GoldPile" parent="." unique_id=1141625304 instance=ExtResource("6_imwwq")]
 position = Vector2(200, 120)
+
+[node name="GemPlinthRed" parent="." unique_id=1009833574 instance=ExtResource("8_sw4ro")]
+position = Vector2(64, 64)
+
+[node name="GemPlinthGreen" parent="." unique_id=1148856633 instance=ExtResource("8_sw4ro")]
+position = Vector2(64, 144)
+
+[node name="GemPlinthBlue" parent="." unique_id=322382731 instance=ExtResource("8_sw4ro")]
+position = Vector2(64, 224)
+
+[node name="RoundGreenGem" parent="." unique_id=1928515060 instance=ExtResource("9_4jqnr")]
+position = Vector2(120, 168)
+
+[node name="RoundGreenGem2" parent="." unique_id=1745496525 instance=ExtResource("10_hmxod")]
+position = Vector2(144, 168)
+
+[node name="RoundRedGem" parent="." unique_id=1492109741 instance=ExtResource("11_5hu64")]
+position = Vector2(168, 168)
 
 [editable path="EasternExit"]
 [editable path="ExitToOutside"]
