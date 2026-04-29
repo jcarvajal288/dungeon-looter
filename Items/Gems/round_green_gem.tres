@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cme5xcxmkwxxx"]
+
+[ext_resource type="Script" uid="uid://c033c2hyxuv6k" path="res://Items/item_data.gd" id="1_28vqe"]
+[ext_resource type="Texture2D" uid="uid://dssxxw1soa27c" path="res://Items/Gems/_art/RoundGreenGem_large.png" id="1_a6kdq"]
+[ext_resource type="Texture2D" uid="uid://bmcdyi5xx0u4t" path="res://Items/Gems/_art/RoundGreenGem_small.png" id="3_nf8ms"]
+
+[resource]
+script = ExtResource("1_28vqe")
+name = "Round Green Gem"
+description = "Polished circular emerald"
+value = 5000
+small_icon = ExtResource("3_nf8ms")
+large_icon = ExtResource("1_a6kdq")
+metadata/_custom_type_script = "uid://c033c2hyxuv6k"

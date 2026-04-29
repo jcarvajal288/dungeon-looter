@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://du6skfvg158wh"]
+
+[ext_resource type="Script" uid="uid://biqlbke5mul2h" path="res://Items/item.gd" id="1_fji43"]
+[ext_resource type="Texture2D" uid="uid://bof6kxgrovxwg" path="res://Items/Gems/_art/RoundRedGem_small.png" id="2_fji43"]
+[ext_resource type="Resource" uid="uid://c4286qpefq6d3" path="res://Items/Gems/round_red_gem.tres" id="2_ji3n3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_86b84"]
+radius = 6.0827627
+
+[node name="RoundRedGem" type="Area2D" unique_id=1492109741]
+script = ExtResource("1_fji43")
+item_data = ExtResource("2_ji3n3")
+metadata/_custom_type_script = "uid://biqlbke5mul2h"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=487514282]
+texture = ExtResource("2_fji43")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2062476401]
+shape = SubResource("CircleShape2D_86b84")

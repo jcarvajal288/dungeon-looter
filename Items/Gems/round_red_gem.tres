@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c4286qpefq6d3"]
+
+[ext_resource type="Script" uid="uid://c033c2hyxuv6k" path="res://Items/item_data.gd" id="1_7qihk"]
+[ext_resource type="Texture2D" uid="uid://1vi108wbsxi8" path="res://Items/Gems/_art/RoundRedGem_large.png" id="1_t217q"]
+[ext_resource type="Texture2D" uid="uid://bof6kxgrovxwg" path="res://Items/Gems/_art/RoundRedGem_small.png" id="3_3suf4"]
+
+[resource]
+script = ExtResource("1_7qihk")
+name = "Round Red Gem"
+description = "Polished circular ruby"
+value = 5000
+small_icon = ExtResource("3_3suf4")
+large_icon = ExtResource("1_t217q")
+metadata/_custom_type_script = "uid://c033c2hyxuv6k"

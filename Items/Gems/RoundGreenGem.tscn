@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dcg2r1e7s8r7x"]
+
+[ext_resource type="Script" uid="uid://biqlbke5mul2h" path="res://Items/item.gd" id="1_rjr8h"]
+[ext_resource type="Texture2D" uid="uid://bmcdyi5xx0u4t" path="res://Items/Gems/_art/RoundGreenGem_small.png" id="2_y2ptm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m7pmn"]
+radius = 6.0
+
+[node name="RoundGreenGem" type="Area2D" unique_id=1928515060]
+script = ExtResource("1_rjr8h")
+metadata/_custom_type_script = "uid://biqlbke5mul2h"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=336774808]
+texture = ExtResource("2_y2ptm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1957530151]
+shape = SubResource("CircleShape2D_m7pmn")
