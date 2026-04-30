@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bouaw5vwspud3"]
 
-[ext_resource type="Script" uid="uid://b416mdr3pkk6w" path="res://Levels/prop.gd" id="1_q8yqu"]
+[ext_resource type="Script" uid="uid://b416mdr3pkk6w" path="res://Levels/Components/Prop/prop.gd" id="1_q8yqu"]
 [ext_resource type="Texture2D" uid="uid://dpu71lirtq1ah" path="res://Levels/Outside/_art/dungeon_entrance.png" id="1_t5yt3"]
 
 [node name="DungeonEntrance" type="StaticBody2D" unique_id=1296504972]

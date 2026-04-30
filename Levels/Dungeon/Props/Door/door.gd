@@ -7,10 +7,6 @@ class_name Door extends Prop
 @onready var open_frame = closed_frame + 8
 
 
-func _ready() -> void:
-	$InteractionArea.on_interaction.connect(on_interaction)	
-
-
 func on_interaction() -> void:
 	var is_closed = PersistentState.door_states[door_id]
 	if is_closed:

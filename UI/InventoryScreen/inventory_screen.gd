@@ -20,7 +20,7 @@ func _ready() -> void:
 
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel") and control.visible:
+	if event.is_action_pressed("ui_cancel"):
 		toggle_inventory()
 	handle_inventory_selection(event)
 	var new_x = INVENTORY_TOP_LEFT.x + selected_inventory_slot.x * INVENTORY_SELECTOR_SIDE
@@ -51,4 +51,10 @@ func handle_inventory_selection(event: InputEvent) -> void:
 	elif event.is_action_pressed("ui_down") and selected_inventory_slot.y != 3:
 		selected_inventory_slot.y += 1
 	elif event.is_action_pressed("interact"):
-		pass # to fill in later
+		use_selected_item()
+
+
+func use_selected_item() -> void:
+	var intersecting_areas = Global.player.get_intersecting_areas()	
+	# make GemPlinths a class that has a interact_with_item function.
+	# search for that class here
