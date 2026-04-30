@@ -23,7 +23,10 @@ x ending game and calculating final value
 x save door state between loads
 x key and lock puzzle
 x dialog box when door is locked/unlocked
-* multiple item puzzle
++ multiple item puzzle
+    x make gem key objects
+    x make plinth slot objects
+    * make items in inventory usable
 * simple patrolling enemy
 * orthogonal attack animations
 * combat and health
