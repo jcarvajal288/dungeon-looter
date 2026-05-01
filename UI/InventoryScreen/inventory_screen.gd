@@ -11,6 +11,7 @@ signal toggle_inventory_screen
 @onready var item_info = $Control/ItemInfo
 @onready var selected_inventory_slot: Vector2i = Vector2i(0, 0)
 @onready var inventory_selector: TextureRect = $Control/InventorySelector
+@onready var inventory_grid: InventoryGrid = $Control/InventoryGrid
 
 
 func _ready() -> void:
@@ -33,7 +34,7 @@ func _input(event: InputEvent) -> void:
 func toggle_inventory() -> void:
 	control.visible = !control.visible
 	if control.visible:
-		$Control/InventoryGrid.refresh(inventory)
+		inventory_grid.refresh(inventory)
 		Global.toggle_pause.emit(true)
 		self.process_mode = Node.PROCESS_MODE_INHERIT
 	else:
@@ -64,6 +65,8 @@ func use_selected_item() -> bool:
 	for node in interacting_nodes:
 		if node is ItemSlotArea:
 			var item = inventory.items[slot_index].item_data
-			node.interact_with_item(item)
+			if node.interact_with_item(item):
+				inventory.remove_item(slot_index)
+				inventory_grid.refresh(inventory)
 			return true
 	return false

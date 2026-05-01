@@ -6,7 +6,7 @@ func update_slot(item_data: ItemData) -> void:
 		$ItemImage.texture = item_data.large_icon
 		$ItemImage.show()
 	else:
-		$ItemImage.hide()
+		clear()
 
 
 func clear() -> void:

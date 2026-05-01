@@ -13,6 +13,8 @@ func refresh(inventory: Inventory) -> void:
 	for i in range(min(inventory.items.size(), slots.size())):
 		if inventory.items[i] != null:
 			slots[i].update_slot(inventory.items[i].item_data)
+		else:
+			slots[i].clear()
 
 
 func remove_item(item_index: int) -> void:
