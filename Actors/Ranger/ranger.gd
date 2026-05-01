@@ -63,17 +63,8 @@ func determine_facing(direction: Vector2) -> String:
 
 
 func check_for_item() -> void:
-	var space_state = get_world_2d().direct_space_state
-	var query = PhysicsShapeQueryParameters2D.new()
-	query.shape = $CollisionShape2D.shape
-	query.transform = global_transform
-	query.collide_with_areas = true 
-	query.collide_with_bodies = false
-	query.collision_mask = 1 << (Global.CollisionLayer.ITEM - 1)
-
-	var results = space_state.intersect_shape(query)
-	for result in results:
-		var node = result.collider
+	var nodes = get_interacting_nodes()
+	for node in nodes:
 		if node is Item:
 			if inventory.add_item(node.item_data):
 				node.queue_free()
@@ -81,3 +72,16 @@ func check_for_item() -> void:
 				print("Inventory full")
 		elif node is InteractionArea:
 			node.on_interaction.emit()
+
+
+func get_interacting_nodes() -> Array:
+	var space_state = get_world_2d().direct_space_state
+	var query = PhysicsShapeQueryParameters2D.new()
+	query.shape = $CollisionShape2D.shape
+	query.transform = global_transform
+	query.collide_with_areas = true 
+	query.collide_with_bodies = false
+	query.collision_mask = 1 << (Global.CollisionLayer.ITEM - 1)
+	var results = space_state.intersect_shape(query)
+	print(results.size())
+	return results.map(func(result): return result.collider)

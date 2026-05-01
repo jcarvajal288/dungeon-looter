@@ -52,9 +52,19 @@ func handle_inventory_selection(event: InputEvent) -> void:
 		selected_inventory_slot.y += 1
 	elif event.is_action_pressed("interact"):
 		use_selected_item()
+		toggle_inventory()
 
 
 func use_selected_item() -> void:
-	var intersecting_areas = Global.player.get_intersecting_areas()	
-	# make GemPlinths a class that has a interact_with_item function.
-	# search for that class here
+	Global.toggle_pause.emit(false)
+	var interacting_nodes = Global.player.get_interacting_nodes()	
+	for node in interacting_nodes:
+		print(node.get_parent().name)
+		var parent = node.get_parent()
+		if node is InteractionArea and parent.has_node("ItemSlot"):
+			print('getting item')
+			var slot_index = selected_inventory_slot.y * 2 + selected_inventory_slot.x
+			if inventory.has_item_at_index(slot_index):
+				print('passing item')
+				var item = inventory.items[slot_index].item_data
+				parent.get_node("ItemSlot").interact_with_item(item)
