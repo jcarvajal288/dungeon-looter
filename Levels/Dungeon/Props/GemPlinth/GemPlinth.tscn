@@ -11,6 +11,7 @@ size = Vector2(20, 16)
 size = Vector2(24, 25)
 
 [node name="GemPlinth" type="StaticBody2D" unique_id=1009833574]
+y_sort_enabled = true
 script = ExtResource("1_25khk")
 metadata/_custom_type_script = "uid://b416mdr3pkk6w"
 

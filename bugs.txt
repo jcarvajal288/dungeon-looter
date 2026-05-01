@@ -1,2 +1,2 @@
-No open bugs!
+- Y sorting is borked for everything
 
