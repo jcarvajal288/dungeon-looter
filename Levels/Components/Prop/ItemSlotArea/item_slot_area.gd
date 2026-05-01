@@ -1,4 +1,4 @@
-extends Node2D
+class_name ItemSlotArea extends InteractionArea
 
 @export var key_item: ItemData
 

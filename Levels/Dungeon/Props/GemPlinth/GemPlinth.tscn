@@ -2,14 +2,13 @@
 
 [ext_resource type="Script" uid="uid://c27qrncqx7oc" path="res://Levels/Dungeon/Props/GemPlinth/gem_plinth.gd" id="1_25khk"]
 [ext_resource type="Texture2D" uid="uid://chpy215ogwanv" path="res://Levels/Dungeon/Props/GemPlinth/_art/GemPlinth.png" id="2_djlsq"]
-[ext_resource type="PackedScene" uid="uid://bygou044la11u" path="res://Levels/Components/InteractionArea/InteractionArea.tscn" id="3_25khk"]
-[ext_resource type="PackedScene" uid="uid://dh6oy5tlk10ky" path="res://Levels/Components/Prop/ItemSlot/ItemSlot.tscn" id="4_7em4l"]
+[ext_resource type="PackedScene" uid="uid://dh6oy5tlk10ky" path="res://Levels/Components/Prop/ItemSlotArea/ItemSlotArea.tscn" id="4_7em4l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25khk"]
 size = Vector2(20, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7em4l"]
-size = Vector2(24, 24)
+size = Vector2(24, 25)
 
 [node name="GemPlinth" type="StaticBody2D" unique_id=1009833574]
 script = ExtResource("1_25khk")
@@ -23,12 +22,11 @@ texture = ExtResource("2_djlsq")
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_25khk")
 
-[node name="InteractionArea" parent="." unique_id=532246333 instance=ExtResource("3_25khk")]
-
-[node name="CollisionShape2D" parent="InteractionArea" index="0" unique_id=612497491]
-shape = SubResource("RectangleShape2D_7em4l")
-
-[node name="ItemSlot" parent="." unique_id=523679608 instance=ExtResource("4_7em4l")]
+[node name="ItemSlotArea" parent="." unique_id=523679608 instance=ExtResource("4_7em4l")]
 position = Vector2(0, -2)
 
-[editable path="InteractionArea"]
+[node name="CollisionShape2D" parent="ItemSlotArea" index="1" unique_id=18331067]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_7em4l")
+
+[editable path="ItemSlotArea"]

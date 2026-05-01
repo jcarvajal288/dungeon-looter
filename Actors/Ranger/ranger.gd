@@ -83,5 +83,4 @@ func get_interacting_nodes() -> Array:
 	query.collide_with_bodies = false
 	query.collision_mask = 1 << (Global.CollisionLayer.ITEM - 1)
 	var results = space_state.intersect_shape(query)
-	print(results.size())
 	return results.map(func(result): return result.collider)

@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://dh6oy5tlk10ky"]
-
-[ext_resource type="Script" uid="uid://deq87m4kwpti7" path="res://Levels/Components/Prop/ItemSlot/item_slot.gd" id="1_dpf4n"]
-
-[node name="ItemSlot" type="Node2D" unique_id=523679608]
-script = ExtResource("1_dpf4n")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1834802834]

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dh6oy5tlk10ky"]
+
+[ext_resource type="Script" uid="uid://deq87m4kwpti7" path="res://Levels/Components/Prop/ItemSlotArea/item_slot_area.gd" id="1_0wqvp"]
+
+[node name="ItemSlotArea" type="Area2D" unique_id=1205771193]
+collision_layer = 5
+script = ExtResource("1_0wqvp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1834802834]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=18331067]
+debug_color = Color(0.6, 0, 0.7019608, 0.41960785)
