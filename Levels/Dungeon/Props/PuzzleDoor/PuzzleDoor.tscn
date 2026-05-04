@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b87ku2qn4tn7d"]
+
+[ext_resource type="Texture2D" uid="uid://bifcgbt8kclyk" path="res://Levels/Dungeon/Props/Door/_art/doors.png" id="1_bo8fp"]
+[ext_resource type="Script" uid="uid://cj5wnugs3u0qf" path="res://Levels/Dungeon/Props/PuzzleDoor/puzzle_door.gd" id="1_wbnlo"]
+[ext_resource type="PackedScene" uid="uid://bygou044la11u" path="res://Levels/Components/InteractionArea/InteractionArea.tscn" id="2_wvph4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wvph4"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbnlo"]
+
+[node name="PuzzleDoor" type="StaticBody2D" unique_id=5296059]
+script = ExtResource("1_wbnlo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=537218839]
+texture = ExtResource("1_bo8fp")
+hframes = 8
+vframes = 2
+frame = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1492952389]
+shape = SubResource("RectangleShape2D_wvph4")
+
+[node name="InteractionArea" parent="." unique_id=532246333 instance=ExtResource("2_wvph4")]
+
+[node name="CollisionShape2D" parent="InteractionArea" index="0" unique_id=612497491]
+shape = SubResource("RectangleShape2D_wbnlo")
+
+[editable path="InteractionArea"]

@@ -1,2 +1,3 @@
 - Y sorting is borked for everything
+- Items reappear after leaving and re-entering rooms
 

@@ -18,4 +18,6 @@ enum CollisionLayer {
 signal bind_camera(rect: Rect2)
 signal toggle_pause(is_paused: bool)
 signal transition_room(next_room_path: Node2D, entry_id: String)
+signal unlock_door(door_id: String)
 @warning_ignore_restore("unused_signal")
+

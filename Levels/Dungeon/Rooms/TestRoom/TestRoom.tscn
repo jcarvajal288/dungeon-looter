@@ -14,6 +14,7 @@
 [ext_resource type="Resource" uid="uid://cme5xcxmkwxxx" path="res://Items/Gems/round_green_gem.tres" id="10_xftvw"]
 [ext_resource type="PackedScene" uid="uid://du6skfvg158wh" path="res://Items/Gems/RoundRedGem.tscn" id="11_5hu64"]
 [ext_resource type="Resource" uid="uid://b5hjqc803kam8" path="res://Items/Gems/round_blue_gem.tres" id="11_abcgv"]
+[ext_resource type="PackedScene" uid="uid://b87ku2qn4tn7d" path="res://Levels/Dungeon/Props/PuzzleDoor/PuzzleDoor.tscn" id="15_xftvw"]
 
 [node name="TestRoom" type="Node2D" unique_id=425892536]
 y_sort_enabled = true
@@ -60,6 +61,11 @@ position = Vector2(10, 3)
 position = Vector2(-11, 136)
 next_room_path = "res://Levels/Dungeon/Rooms/TestRoomWest/TestRoomWest.tscn"
 entry_id = "EasternExit"
+
+[node name="PuzzleDoor" parent="WesternExit" unique_id=5296059 instance=ExtResource("15_xftvw")]
+position = Vector2(19, 0)
+rotation = -1.5707964
+door_id = "TEST_ROOM_PUZZLE_DOOR"
 
 [node name="KeySmall" parent="." unique_id=1695990381 instance=ExtResource("4_8ptlu")]
 position = Vector2(200, 88)
