@@ -26,7 +26,8 @@ x dialog box when door is locked/unlocked
 + multiple item puzzle
     x make gem key objects
     x make plinth slot objects
-    * make items in inventory usable
+    x make items in inventory usable
+    * solving the puzzle opens a door
 * simple patrolling enemy
 * orthogonal attack animations
 * combat and health
