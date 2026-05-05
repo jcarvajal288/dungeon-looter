@@ -14,6 +14,7 @@
 [ext_resource type="Resource" uid="uid://cme5xcxmkwxxx" path="res://Items/Gems/round_green_gem.tres" id="10_xftvw"]
 [ext_resource type="PackedScene" uid="uid://du6skfvg158wh" path="res://Items/Gems/RoundRedGem.tscn" id="11_5hu64"]
 [ext_resource type="Resource" uid="uid://b5hjqc803kam8" path="res://Items/Gems/round_blue_gem.tres" id="11_abcgv"]
+[ext_resource type="Script" uid="uid://c033c2hyxuv6k" path="res://Items/item_data.gd" id="11_w7bqa"]
 [ext_resource type="PackedScene" uid="uid://b87ku2qn4tn7d" path="res://Levels/Dungeon/Props/PuzzleDoor/PuzzleDoor.tscn" id="15_xftvw"]
 
 [node name="TestRoom" type="Node2D" unique_id=425892536]
@@ -75,15 +76,18 @@ position = Vector2(200, 120)
 
 [node name="GemPlinthRed" parent="." unique_id=1009833574 instance=ExtResource("8_sw4ro")]
 position = Vector2(64, 64)
-key_item = ExtResource("9_5hu64")
+correct_item = ExtResource("9_5hu64")
+slotable_items = Array[ExtResource("11_w7bqa")]([ExtResource("11_abcgv"), ExtResource("10_xftvw"), ExtResource("9_5hu64")])
 
 [node name="GemPlinthGreen" parent="." unique_id=1148856633 instance=ExtResource("8_sw4ro")]
 position = Vector2(64, 144)
-key_item = ExtResource("10_xftvw")
+correct_item = ExtResource("10_xftvw")
+slotable_items = Array[ExtResource("11_w7bqa")]([ExtResource("11_abcgv"), ExtResource("10_xftvw"), ExtResource("9_5hu64")])
 
 [node name="GemPlinthBlue" parent="." unique_id=322382731 instance=ExtResource("8_sw4ro")]
 position = Vector2(64, 224)
-key_item = ExtResource("11_abcgv")
+correct_item = ExtResource("11_abcgv")
+slotable_items = Array[ExtResource("11_w7bqa")]([ExtResource("11_abcgv"), ExtResource("10_xftvw"), ExtResource("9_5hu64")])
 
 [node name="RoundBlueGem" parent="." unique_id=1928515060 instance=ExtResource("9_4jqnr")]
 position = Vector2(90, 228)
