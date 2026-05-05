@@ -24,6 +24,7 @@ position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_25khk")
 
 [node name="ItemSlotArea" parent="." unique_id=523679608 instance=ExtResource("4_7em4l")]
+z_index = 1
 position = Vector2(0, -2)
 
 [node name="CollisionShape2D" parent="ItemSlotArea" index="1" unique_id=18331067]
