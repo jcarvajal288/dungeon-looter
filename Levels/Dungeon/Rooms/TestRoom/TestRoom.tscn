@@ -86,13 +86,13 @@ position = Vector2(64, 224)
 key_item = ExtResource("11_abcgv")
 
 [node name="RoundBlueGem" parent="." unique_id=1928515060 instance=ExtResource("9_4jqnr")]
-position = Vector2(120, 168)
+position = Vector2(90, 228)
 
 [node name="RoundGreenGem" parent="." unique_id=1745496525 instance=ExtResource("10_hmxod")]
-position = Vector2(144, 168)
+position = Vector2(90, 147)
 
 [node name="RoundRedGem" parent="." unique_id=1492109741 instance=ExtResource("11_5hu64")]
-position = Vector2(168, 168)
+position = Vector2(90, 66)
 
 [editable path="EasternExit"]
 [editable path="ExitToOutside"]
