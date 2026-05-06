@@ -4,7 +4,7 @@ class_name ItemSlotArea extends InteractionArea
 
 var item_in_slot = null
 
-signal item_put_in_slot
+signal item_put_in_slot(item_name: String)
 
 
 func _ready() -> void:
@@ -16,11 +16,15 @@ func set_slotable_items(slotable_items: Array[ItemData]) -> void:
 
 
 func interact_with_item(item: ItemData) -> bool:
-	if item.name in slotable_item_names:
+	if item_in_slot != null:
+		NotificationScreen.show_message.emit("The slot is not empty")	
+		return false
+	elif item.name in slotable_item_names:
 		item_in_slot = item
 		$Sprite2D.texture = item.small_icon
 		$Sprite2D.visible = true
-		item_put_in_slot.emit()
+		item_put_in_slot.emit(item.name)
 		return true
 	else:
+		NotificationScreen.show_message.emit("This item does not fit in this slot")	
 		return false
