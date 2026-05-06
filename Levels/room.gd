@@ -4,6 +4,7 @@ const MAP_TILE_SIZE = 16
 
 
 func _ready() -> void:
+	y_sort_enabled = true
 	var room_rect = $TileMapFloor.get_used_rect()
 	var pos = room_rect.position * MAP_TILE_SIZE
 	var size = room_rect.size * MAP_TILE_SIZE

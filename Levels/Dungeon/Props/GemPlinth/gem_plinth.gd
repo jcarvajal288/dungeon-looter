@@ -5,6 +5,7 @@ class_name GemPlinth extends Prop
 
 
 func _ready() -> void:
+	super()
 	$ItemSlotArea.on_interaction.connect(on_interaction)	
 	$ItemSlotArea.set_slotable_items(slotable_items)
 

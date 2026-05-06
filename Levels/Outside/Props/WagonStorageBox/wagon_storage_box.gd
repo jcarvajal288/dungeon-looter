@@ -1,6 +1,7 @@
 class_name WagonStorageBox extends Prop
 
 func _ready() -> void:
+    super()
     $InteractionArea.on_interaction.connect(on_interaction)
 
 
