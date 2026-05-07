@@ -30,7 +30,8 @@ x dialog box when door is locked/unlocked
     x allow gems to be slotted into plinths
     x stop gems from 'overwriting' other gems previously placed in a plinth
     x allow gems to be taken out of plinths and put into inventory
-    * putting the correct gems in the correct plinths opens a door
+    x putting the correct gems in the correct plinths opens the puzzle door
+    x disable removing a gem from the solved puzzle
 * simple patrolling enemy
 * orthogonal attack animations
 * combat and health
