@@ -2,7 +2,7 @@ class_name ItemSlotArea extends InteractionArea
 
 @export var slotable_item_names: Array[String]
 
-var item_in_slot = null
+var item_in_slot: ItemData = null
 
 signal item_put_in_slot(item_name: String)
 
@@ -28,3 +28,12 @@ func interact_with_item(item: ItemData) -> bool:
 	else:
 		NotificationScreen.show_message.emit("This item does not fit in this slot")	
 		return false
+
+
+func move_item_to_player_inventory():
+	if item_in_slot == null:
+		push_error("Attempting to take item from empty item slot")
+		return
+	Global.player.inventory.add_item(item_in_slot)
+	item_in_slot = null
+	$Sprite2D.visible = false

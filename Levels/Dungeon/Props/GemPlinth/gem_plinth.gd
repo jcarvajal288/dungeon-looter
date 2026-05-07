@@ -18,7 +18,8 @@ func _ready() -> void:
 func on_interaction() -> void:
 	var item_in_slot = $ItemSlotArea.item_in_slot
 	if item_in_slot != null:
-		NotificationScreen.show_message.emit("The %s has been set in the plinth." % item_in_slot.name)
+		NotificationScreen.show_message.emit("You take the %s." % item_in_slot.name)
+		$ItemSlotArea.move_item_to_player_inventory()
 	else:
 		NotificationScreen.show_message.emit("You see a round impression in the plinth.")
 

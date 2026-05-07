@@ -15,7 +15,7 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("toggle_inventory"):
 		InventoryScreen.toggle_inventory_screen.emit()
 	elif event.is_action_pressed("interact"):
-		check_for_item()
+		check_for_interaction()
 		get_viewport().set_input_as_handled()
 
 
@@ -62,7 +62,7 @@ func determine_facing(direction: Vector2) -> String:
 		return facing
 
 
-func check_for_item() -> void:
+func check_for_interaction() -> void:
 	var nodes = get_interacting_nodes()
 	for node in nodes:
 		if node is Item:
