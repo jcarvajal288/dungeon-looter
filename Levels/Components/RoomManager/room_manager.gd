@@ -14,14 +14,14 @@ func _transition_room(next_room_path: String, entry_id: String) -> void:
 	current_room = room
 	get_parent().call_deferred("add_room", room)
 
-	var target_position = room.get_entry_point(entry_id)
+	var target_position = current_room.get_entry_point(entry_id)
 	var is_obstructed = true
 	while is_obstructed:
 		is_obstructed = check_for_collisions_at(target_position)
 		if is_obstructed:
 			await get_tree().physics_frame
 		else:
-			Global.player.global_position = room.get_entry_point(entry_id)
+			Global.player.global_position = current_room.get_entry_point(entry_id)
 
 
 func check_for_collisions_at(pos: Vector2) -> bool:

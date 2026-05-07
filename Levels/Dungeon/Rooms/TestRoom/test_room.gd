@@ -3,6 +3,7 @@ extends Room
 func _ready() -> void:
 	super()
 	$EasternExit/Door.set_closed_state(PersistentState.door_states["TEST_ROOM_EASTERN_EXIT"])
+	$WesternExit/PuzzleDoor.set_closed_state(PersistentState.door_states["TEST_ROOM_PUZZLE_DOOR"])
 	$GemPlinthRed.solved.connect(check_gem_puzzle)
 	$GemPlinthGreen.solved.connect(check_gem_puzzle)
 	$GemPlinthBlue.solved.connect(check_gem_puzzle)
