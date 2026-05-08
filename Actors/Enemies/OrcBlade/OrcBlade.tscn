@@ -1,0 +1,357 @@
+[gd_scene format=3 uid="uid://da7lbmrejejmq"]
+
+[ext_resource type="Texture2D" uid="uid://dsdjaa7tyunxm" path="res://Actors/Enemies/OrcBlade/_art/OrcBlade.png" id="1_h7jak"]
+
+[sub_resource type="Animation" id="Animation_onmhl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_johbk"]
+resource_name = "attackNorthEast"
+length = 0.80001
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [96, 97, 98, 99, 100, 101, 102, 103]
+}
+
+[sub_resource type="Animation" id="Animation_nclge"]
+resource_name = "attackNorthWest"
+length = 0.80001
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [104, 105, 106, 107, 108, 109, 110, 111]
+}
+
+[sub_resource type="Animation" id="Animation_ww80p"]
+resource_name = "attackSouthEast"
+length = 0.80001
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [80, 81, 82, 83, 84, 85, 86, 87]
+}
+
+[sub_resource type="Animation" id="Animation_tc1td"]
+resource_name = "attackSouthWest"
+length = 0.80001
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [88, 89, 90, 91, 92, 93, 94, 95]
+}
+
+[sub_resource type="Animation" id="Animation_m0gsh"]
+resource_name = "die"
+length = 1.7000101
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.90000004, 1, 1.1, 1.2, 1.3000001, 1.4, 1.5, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144]
+}
+
+[sub_resource type="Animation" id="Animation_l33ax"]
+resource_name = "hitNorthEast"
+length = 0.40001002
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [120, 121, 122, 123]
+}
+
+[sub_resource type="Animation" id="Animation_wqfqb"]
+resource_name = "hitNorthWest"
+length = 0.40001002
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [124, 125, 126, 127]
+}
+
+[sub_resource type="Animation" id="Animation_wtji6"]
+resource_name = "hitSouthEast"
+length = 0.40001002
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [112, 113, 114, 115]
+}
+
+[sub_resource type="Animation" id="Animation_sqi7u"]
+resource_name = "hitSouthWest"
+length = 0.40001002
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [116, 117, 118, 119]
+}
+
+[sub_resource type="Animation" id="Animation_h7jak"]
+resource_name = "idleNorthEast"
+length = 3.20002
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8000001, 2, 2.2, 2.4, 2.6000001, 2.8, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+}
+
+[sub_resource type="Animation" id="Animation_73hlf"]
+resource_name = "idleNorthWest"
+length = 3.20002
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8000001, 2, 2.2, 2.4, 2.6000001, 2.8, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63]
+}
+
+[sub_resource type="Animation" id="Animation_h57js"]
+resource_name = "idleSouthEast"
+length = 3.20002
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8000001, 2, 2.2, 2.4, 2.6000001, 2.8, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+}
+
+[sub_resource type="Animation" id="Animation_pobcf"]
+resource_name = "idleSouthWest"
+length = 3.20002
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8000001, 2, 2.2, 2.4, 2.6000001, 2.8, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+}
+
+[sub_resource type="Animation" id="Animation_tmruj"]
+resource_name = "walkNorthEast"
+length = 0.80002004
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [73, 74, 75, 74]
+}
+
+[sub_resource type="Animation" id="Animation_snuy2"]
+resource_name = "walkNorthWest"
+length = 0.80002004
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [77, 78, 79, 78]
+}
+
+[sub_resource type="Animation" id="Animation_2haau"]
+resource_name = "walkSouthEast"
+length = 0.80002004
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [65, 66, 67, 66]
+}
+
+[sub_resource type="Animation" id="Animation_rmyw5"]
+resource_name = "walkSouthWest"
+length = 0.80002004
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [69, 70, 71, 70]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_73hlf"]
+_data = {
+&"RESET": SubResource("Animation_onmhl"),
+&"attackNorthEast": SubResource("Animation_johbk"),
+&"attackNorthWest": SubResource("Animation_nclge"),
+&"attackSouthEast": SubResource("Animation_ww80p"),
+&"attackSouthWest": SubResource("Animation_tc1td"),
+&"die": SubResource("Animation_m0gsh"),
+&"hitNorthEast": SubResource("Animation_l33ax"),
+&"hitNorthWest": SubResource("Animation_wqfqb"),
+&"hitSouthEast": SubResource("Animation_wtji6"),
+&"hitSouthWest": SubResource("Animation_sqi7u"),
+&"idleNorthEast": SubResource("Animation_h7jak"),
+&"idleNorthWest": SubResource("Animation_73hlf"),
+&"idleSouthEast": SubResource("Animation_h57js"),
+&"idleSouthWest": SubResource("Animation_pobcf"),
+&"walkNorthEast": SubResource("Animation_tmruj"),
+&"walkNorthWest": SubResource("Animation_snuy2"),
+&"walkSouthEast": SubResource("Animation_2haau"),
+&"walkSouthWest": SubResource("Animation_rmyw5")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h7jak"]
+radius = 7.0
+height = 20.0
+
+[node name="OrcBlade" type="CharacterBody2D" unique_id=252555697]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=642965317]
+texture = ExtResource("1_h7jak")
+hframes = 16
+vframes = 10
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=592267414]
+libraries/ = SubResource("AnimationLibrary_73hlf")
+autoplay = &"idleSouthEast"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1931871077]
+position = Vector2(0, -1)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_h7jak")

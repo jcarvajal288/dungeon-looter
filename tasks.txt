@@ -23,7 +23,7 @@ x ending game and calculating final value
 x save door state between loads
 x key and lock puzzle
 x dialog box when door is locked/unlocked
-+ multiple item puzzle
+x multiple item puzzle
     x make gem key objects
     x make plinth slot objects
     x make items in inventory usable
@@ -32,7 +32,10 @@ x dialog box when door is locked/unlocked
     x allow gems to be taken out of plinths and put into inventory
     x putting the correct gems in the correct plinths opens the puzzle door
     x disable removing a gem from the solved puzzle
-* simple patrolling enemy
++ simple patrolling enemy
+    x create base orc enemy with animations
+    * orc walks between two points
 * orthogonal attack animations
+    * update existing player functions as a state machine
 * combat and health
 * single small level
