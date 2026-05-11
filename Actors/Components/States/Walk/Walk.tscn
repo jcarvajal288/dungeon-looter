@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://da3vqdxy562qo"]
+
+[ext_resource type="Script" uid="uid://c1g7x8q60u6nj" path="res://Actors/Components/States/Walk/walk.gd" id="1_pw4hp"]
+
+[node name="Walk" type="Node" unique_id=457146045]
+script = ExtResource("1_pw4hp")
+metadata/_custom_type_script = "uid://1qxjv8iepnr2"

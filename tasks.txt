@@ -34,9 +34,10 @@ x multiple item puzzle
     x disable removing a gem from the solved puzzle
 + simple patrolling enemy
     x create base orc enemy with animations
-    * orc walks between two points
-        * implement state machine
-        * two-point patrol AI
+    + orc walks between two points
+        x implement state machine
+        x two-point patrol AI
+        * choice between looping and non-looping patrol routes
 * orthogonal attack animations
     * update existing player functions as a state machine
 * combat and health

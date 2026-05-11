@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b7britp72xkj"]
+
+[ext_resource type="Script" uid="uid://dncinxk8fop8" path="res://Actors/Components/Directors/PatrolDirector/patrol_director.gd" id="1_dxbm4"]
+
+[node name="PatrolDirector" type="Node" unique_id=1784250025]
+script = ExtResource("1_dxbm4")
+metadata/_custom_type_script = "uid://c52dukak564dp"

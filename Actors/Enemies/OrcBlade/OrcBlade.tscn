@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://da7lbmrejejmq"]
 
+[ext_resource type="Script" uid="uid://b5oqxjecwfuo2" path="res://Actors/Enemies/OrcBlade/orc_blade.gd" id="1_73hlf"]
 [ext_resource type="Texture2D" uid="uid://dsdjaa7tyunxm" path="res://Actors/Enemies/OrcBlade/_art/OrcBlade.png" id="1_h7jak"]
+[ext_resource type="Script" uid="uid://b8q8k6ipb63q2" path="res://addons/StateMachine/state_machine.gd" id="2_h57js"]
+[ext_resource type="Script" uid="uid://b255xkjxv111u" path="res://Actors/Components/AnimationPlayer/animation_player.gd" id="3_rmyw5"]
+[ext_resource type="PackedScene" uid="uid://pav2wgjxruem" path="res://Actors/Components/States/Idle/Idle.tscn" id="4_2haau"]
+[ext_resource type="PackedScene" uid="uid://b7britp72xkj" path="res://Actors/Components/Directors/PatrolDirector/PatrolDirector.tscn" id="4_pobcf"]
+[ext_resource type="PackedScene" uid="uid://da3vqdxy562qo" path="res://Actors/Components/States/Walk/Walk.tscn" id="5_rmyw5"]
 
 [sub_resource type="Animation" id="Animation_onmhl"]
 length = 0.001
@@ -341,6 +347,7 @@ radius = 7.0
 height = 20.0
 
 [node name="OrcBlade" type="CharacterBody2D" unique_id=252555697]
+script = ExtResource("1_73hlf")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=642965317]
 texture = ExtResource("1_h7jak")
@@ -350,8 +357,29 @@ vframes = 10
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=592267414]
 libraries/ = SubResource("AnimationLibrary_73hlf")
 autoplay = &"idleSouthEast"
+script = ExtResource("3_rmyw5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1931871077]
 position = Vector2(0, -1)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_h7jak")
+
+[node name="StateMachine" type="Node" parent="." unique_id=415621097 node_paths=PackedStringArray("director", "animation_player", "starting_state")]
+script = ExtResource("2_h57js")
+director = NodePath("../PatrolDirector")
+animation_player = NodePath("../AnimationPlayer")
+starting_state = NodePath("Idle")
+metadata/_custom_type_script = "uid://b8q8k6ipb63q2"
+
+[node name="Idle" parent="StateMachine" unique_id=1234505120 node_paths=PackedStringArray("move_state") instance=ExtResource("4_2haau")]
+move_state = NodePath("../Walk")
+animation_name = "idle"
+animation_type = 1
+
+[node name="Walk" parent="StateMachine" unique_id=457146045 node_paths=PackedStringArray("idle_state") instance=ExtResource("5_rmyw5")]
+idle_state = NodePath("../Idle")
+animation_name = "walk"
+animation_type = 1
+
+[node name="PatrolDirector" parent="." unique_id=1784250025 node_paths=PackedStringArray("subject") instance=ExtResource("4_pobcf")]
+subject = NodePath("..")

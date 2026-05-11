@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://pav2wgjxruem"]
+
+[ext_resource type="Script" uid="uid://bfoypfwbjmjx4" path="res://Actors/Components/States/Idle/idle.gd" id="1_5xo8j"]
+
+[node name="Idle" type="Node" unique_id=1234505120]
+script = ExtResource("1_5xo8j")
+metadata/_custom_type_script = "uid://1qxjv8iepnr2"
