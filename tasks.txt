@@ -35,6 +35,8 @@ x multiple item puzzle
 + simple patrolling enemy
     x create base orc enemy with animations
     * orc walks between two points
+        * implement state machine
+        * two-point patrol AI
 * orthogonal attack animations
     * update existing player functions as a state machine
 * combat and health
