@@ -32,12 +32,12 @@ x multiple item puzzle
     x allow gems to be taken out of plinths and put into inventory
     x putting the correct gems in the correct plinths opens the puzzle door
     x disable removing a gem from the solved puzzle
-+ simple patrolling enemy
+x simple patrolling enemy
     x create base orc enemy with animations
-    + orc walks between two points
+    x orc walks between two points
         x implement state machine
         x two-point patrol AI
-        * choice between looping and non-looping patrol routes
+        x choice between looping and non-looping patrol routes
 * orthogonal attack animations
     * update existing player functions as a state machine
 * combat and health

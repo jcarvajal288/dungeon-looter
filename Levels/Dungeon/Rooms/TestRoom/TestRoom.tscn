@@ -104,13 +104,16 @@ z_index = 5
 y_sort_enabled = true
 position = Vector2(150, 41)
 
-[node name="Point1" type="Marker2D" parent="OrcBlade/PatrolDirector" parent_id_path=PackedInt32Array(252555697, 1784250025) index="0" unique_id=908086896]
+[node name="PatrolDirector" parent="OrcBlade" index="4" unique_id=1784250025]
+is_loop = false
+
+[node name="Point1" type="Marker2D" parent="OrcBlade/PatrolDirector" index="0" unique_id=908086896]
 position = Vector2(168, 40)
 
-[node name="Point2" type="Marker2D" parent="OrcBlade/PatrolDirector" parent_id_path=PackedInt32Array(252555697, 1784250025) index="1" unique_id=125431549]
+[node name="Point2" type="Marker2D" parent="OrcBlade/PatrolDirector" index="1" unique_id=125431549]
 position = Vector2(232, 40)
 
-[node name="Point3" type="Marker2D" parent="OrcBlade/PatrolDirector" parent_id_path=PackedInt32Array(252555697, 1784250025) index="2" unique_id=2074802294]
+[node name="Point3" type="Marker2D" parent="OrcBlade/PatrolDirector" index="2" unique_id=2074802294]
 position = Vector2(232, 72)
 
 [editable path="EasternExit"]
