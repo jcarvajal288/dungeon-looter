@@ -38,7 +38,14 @@ x simple patrolling enemy
         x implement state machine
         x two-point patrol AI
         x choice between looping and non-looping patrol routes
-* orthogonal attack animations
-    * update existing player functions as a state machine
-* combat and health
-* single small level
+_ ranged player attacks
+    _ update existing player functions as a state machine
+    _ ranged attack animations
+    _ arrow projectile object
+    _ arrow inventory object
+    _ disallow ranged attacks if no arrow in inventory
+    _ track counts for stackable inventory items (like arrows)
+    _ subtract an arrow from inventory stack when firing
+_ orthogonal melee attack animations
+_ combat and health
+_ single small level
