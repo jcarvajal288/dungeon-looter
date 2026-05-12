@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsdjaa7tyunxm"
-path="res://.godot/imported/OrcBlade.png-70baa53ae0a95b9d6eba38976282ce69.ctex"
+uid="uid://c1vx7eechnejr"
+path="res://.godot/imported/Walk.png-2b0f4c2a5ac23572ae3133d92d546bee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Actors/Enemies/OrcBlade/_art/OrcBlade.png"
-dest_files=["res://.godot/imported/OrcBlade.png-70baa53ae0a95b9d6eba38976282ce69.ctex"]
+source_file="res://Actors/Enemies/OrcBlade/_art/Walk.png"
+dest_files=["res://.godot/imported/Walk.png-2b0f4c2a5ac23572ae3133d92d546bee.ctex"]
 
 [params]
 
