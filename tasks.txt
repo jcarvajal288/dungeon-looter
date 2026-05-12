@@ -38,8 +38,8 @@ x simple patrolling enemy
         x implement state machine
         x two-point patrol AI
         x choice between looping and non-looping patrol routes
-_ ranged player attacks
-    _ update existing player functions as a state machine
+* ranged player attacks
+    x update existing player functions as a state machine
     _ ranged attack animations
     _ arrow projectile object
     _ arrow inventory object

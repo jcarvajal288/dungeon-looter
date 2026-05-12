@@ -3,6 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://c4723js17b6uj" path="res://Actors/Ranger/_art/Ranger.png" id="1_bfyra"]
 [ext_resource type="Script" uid="uid://c2uqy01wrjgk8" path="res://Actors/Ranger/ranger.gd" id="1_dn2y7"]
 [ext_resource type="Resource" uid="uid://je3mw8g6sr5r" path="res://Items/Inventory/inventory.tres" id="2_kra87"]
+[ext_resource type="Script" uid="uid://b255xkjxv111u" path="res://Actors/Components/AnimationPlayer/animation_player.gd" id="4_05ixo"]
+[ext_resource type="Script" uid="uid://b8q8k6ipb63q2" path="res://addons/StateMachine/state_machine.gd" id="5_qk1gc"]
+[ext_resource type="PackedScene" uid="uid://pav2wgjxruem" path="res://Actors/Components/States/Idle/Idle.tscn" id="6_5ol8f"]
+[ext_resource type="PackedScene" uid="uid://da3vqdxy562qo" path="res://Actors/Components/States/Walk/Walk.tscn" id="7_v4t43"]
+[ext_resource type="PackedScene" uid="uid://38ab12jpgqfv" path="res://Actors/Components/Directors/InputDirector/InputDirector.tscn" id="8_5ol8f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bfyra"]
 radius = 6.0
@@ -195,3 +200,24 @@ shape = SubResource("CircleShape2D_bfyra")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=940959743]
 libraries/ = SubResource("AnimationLibrary_qk1gc")
 autoplay = &"idleSouthEast"
+script = ExtResource("4_05ixo")
+
+[node name="StateMachine" type="Node" parent="." unique_id=1191584013 node_paths=PackedStringArray("director", "animation_player", "starting_state")]
+script = ExtResource("5_qk1gc")
+director = NodePath("../InputDirector")
+animation_player = NodePath("../AnimationPlayer")
+starting_state = NodePath("Idle")
+metadata/_custom_type_script = "uid://b8q8k6ipb63q2"
+
+[node name="Idle" parent="StateMachine" unique_id=1234505120 node_paths=PackedStringArray("move_state") instance=ExtResource("6_5ol8f")]
+move_state = NodePath("../Walk")
+animation_name = "idle"
+animation_type = 1
+
+[node name="Walk" parent="StateMachine" unique_id=457146045 node_paths=PackedStringArray("idle_state") instance=ExtResource("7_v4t43")]
+idle_state = NodePath("../Idle")
+animation_name = "walk"
+animation_type = 1
+
+[node name="InputDirector" parent="." unique_id=1851191131 node_paths=PackedStringArray("subject") instance=ExtResource("8_5ol8f")]
+subject = NodePath("..")

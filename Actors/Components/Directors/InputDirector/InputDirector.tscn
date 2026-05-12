@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://38ab12jpgqfv"]
+
+[ext_resource type="Script" uid="uid://bp3hpkp7ksu3i" path="res://Actors/Components/Directors/InputDirector/input_director.gd" id="1_s17bk"]
+
+[node name="InputDirector" type="Node" unique_id=1851191131]
+script = ExtResource("1_s17bk")
+metadata/_custom_type_script = "uid://c52dukak564dp"
