@@ -40,7 +40,7 @@ x simple patrolling enemy
         x choice between looping and non-looping patrol routes
 * ranged player attacks
     x update existing player functions as a state machine
-    _ ranged attack animations
+    x ranged attack animations
     _ arrow projectile object
     _ arrow inventory object
     _ disallow ranged attacks if no arrow in inventory
