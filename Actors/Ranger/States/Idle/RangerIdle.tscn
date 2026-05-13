@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://crw0ugopomiir"]
-
-[ext_resource type="Script" uid="uid://vi7p18urs734" path="res://Actors/Ranger/States/Idle/ranger_idle.gd" id="1_m8gio"]
-
-[node name="RangerIdle" type="Node" unique_id=973071285]
-script = ExtResource("1_m8gio")
-animation_name = "idle"
-animation_type = 1
-metadata/_custom_type_script = "uid://1qxjv8iepnr2"

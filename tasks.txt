@@ -41,7 +41,7 @@ x simple patrolling enemy
 * ranged player attacks
     x update existing player functions as a state machine
     x ranged attack animations
-    _ draw and loose by pressing and releasing shoot button
+    x draw and loose by pressing and releasing shoot button
     _ arrow projectile object
     _ arrow inventory object
     _ disallow ranged attacks if no arrow in inventory

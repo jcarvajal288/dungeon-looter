@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://bid8dyr4c8jaj"]
-
-[ext_resource type="Script" uid="uid://b0pwcdwof0qo6" path="res://Actors/Ranger/States/Walk/ranger_walk.gd" id="1_jyenn"]
-
-[node name="RangerWalk" type="Node" unique_id=1375495397]
-script = ExtResource("1_jyenn")
-animation_name = "walk"
-animation_type = 1
-metadata/_custom_type_script = "uid://1qxjv8iepnr2"

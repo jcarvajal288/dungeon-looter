@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://b3xbdh3mqcr01" path="res://Actors/Ranger/_art/Ranger_walk.png" id="4_v4t43"]
 [ext_resource type="Script" uid="uid://b8q8k6ipb63q2" path="res://addons/StateMachine/state_machine.gd" id="5_qk1gc"]
 [ext_resource type="PackedScene" uid="uid://38ab12jpgqfv" path="res://Actors/Components/Directors/InputDirector/InputDirector.tscn" id="8_5ol8f"]
-[ext_resource type="PackedScene" uid="uid://crw0ugopomiir" path="res://Actors/Ranger/States/Idle/RangerIdle.tscn" id="8_23qqx"]
-[ext_resource type="PackedScene" uid="uid://bid8dyr4c8jaj" path="res://Actors/Ranger/States/Walk/RangerWalk.tscn" id="9_7gy0o"]
+[ext_resource type="PackedScene" uid="uid://crw0ugopomiir" path="res://Actors/Ranger/States/Idle/Idle.tscn" id="8_23qqx"]
+[ext_resource type="PackedScene" uid="uid://bid8dyr4c8jaj" path="res://Actors/Ranger/States/Walk/Walk.tscn" id="9_7gy0o"]
 [ext_resource type="PackedScene" uid="uid://7wuhsjx73ga1" path="res://Actors/Ranger/States/Draw/Draw.tscn" id="10_23qqx"]
 [ext_resource type="PackedScene" uid="uid://d3k3cesxw8x2l" path="res://Actors/Ranger/States/Loose/Loose.tscn" id="11_7gy0o"]
 
