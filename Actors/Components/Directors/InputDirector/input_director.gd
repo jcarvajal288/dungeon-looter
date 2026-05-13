@@ -1,5 +1,8 @@
 extends Director
 
+@onready var interact: bool = false
+@onready var shoot: bool = false
+
 
 func _physics_process(_delta: float) -> void:
 	reset()
@@ -8,3 +11,5 @@ func _physics_process(_delta: float) -> void:
 		snapped(mv.x, 0.5), 
 		snapped(mv.y, 0.5)
 	).normalized()
+	interact = Input.is_action_just_pressed("interact")
+	shoot = Input.is_action_pressed("shoot")

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d3k3cesxw8x2l"]
+
+[ext_resource type="Script" uid="uid://dpex1bpd03d0h" path="res://Actors/Ranger/States/Loose/loose.gd" id="1_mx4ri"]
+
+[node name="Loose" type="Node" unique_id=781525906]
+script = ExtResource("1_mx4ri")
+animation_name = "loose"
+animation_type = 1
+metadata/_custom_type_script = "uid://1qxjv8iepnr2"

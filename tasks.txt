@@ -41,11 +41,13 @@ x simple patrolling enemy
 * ranged player attacks
     x update existing player functions as a state machine
     x ranged attack animations
+    _ draw and loose by pressing and releasing shoot button
     _ arrow projectile object
     _ arrow inventory object
     _ disallow ranged attacks if no arrow in inventory
     _ track counts for stackable inventory items (like arrows)
     _ subtract an arrow from inventory stack when firing
+_ change interact and open inventory to use director and signals instead of triggered with _input
 _ orthogonal melee attack animations
 _ combat and health
 _ single small level

@@ -1,6 +1,8 @@
 extends State
 
 @export var move_state: State
+@export var draw_state: State
+
 
 func enter() -> void:
 	super()
@@ -10,4 +12,6 @@ func enter() -> void:
 func process_frame(_delta: float) -> State:
 	if director.movement_vector != Vector2.ZERO:
 		return move_state
+	elif director.shoot:
+		return draw_state
 	return null
