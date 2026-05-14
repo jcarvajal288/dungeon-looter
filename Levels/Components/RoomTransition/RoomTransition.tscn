@@ -6,6 +6,7 @@
 size = Vector2(16, 16)
 
 [node name="RoomTransition" type="Area2D" unique_id=2069600767]
+collision_layer = 8
 script = ExtResource("1_x08a5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=167524929]

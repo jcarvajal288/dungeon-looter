@@ -4,6 +4,7 @@ class_name Prop extends StaticBody2D
 func _ready() -> void:
 	z_index = Global.RenderOrder.PLAYER
 	y_sort_enabled = true
+	set_collision_layer_value(Global.CollisionLayer.WALL, true)
 	if has_node("InteractionArea"):
 		$InteractionArea.on_interaction.connect(on_interaction)	
 

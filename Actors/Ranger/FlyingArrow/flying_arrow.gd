@@ -17,6 +17,8 @@ var direction = Vector2.ZERO
 func _ready() -> void:
 	z_index = Global.RenderOrder.PLAYER
 	set_direction_frame()
+	body_entered.connect(collide)
+	area_entered.connect(queue_free)
 
 
 func _physics_process(delta: float) -> void:
@@ -41,3 +43,7 @@ func set_direction_frame() -> void:
 		$Sprite2D.frame = 0 # Northwest
 	else:
 		$Sprite2D.frame = 3 # West
+
+
+func collide(_node: Node2D) -> void:
+	queue_free()

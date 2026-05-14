@@ -11,7 +11,8 @@ enum RenderOrder {
 enum CollisionLayer {
 	PLAYER = 1,
 	ENEMY = 2,
-	ITEM = 3
+	ITEM = 3,
+	WALL = 4
 }
 
 @warning_ignore_start("unused_signal")
