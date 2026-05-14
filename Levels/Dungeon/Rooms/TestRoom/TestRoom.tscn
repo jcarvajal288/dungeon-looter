@@ -16,6 +16,7 @@
 [ext_resource type="Resource" uid="uid://b5hjqc803kam8" path="res://Items/Gems/round_blue_gem.tres" id="11_abcgv"]
 [ext_resource type="Script" uid="uid://c033c2hyxuv6k" path="res://Items/item_data.gd" id="11_w7bqa"]
 [ext_resource type="PackedScene" uid="uid://b87ku2qn4tn7d" path="res://Levels/Dungeon/Props/PuzzleDoor/PuzzleDoor.tscn" id="15_xftvw"]
+[ext_resource type="PackedScene" uid="uid://da7lbmrejejmq" path="res://Actors/Enemies/OrcBlade/OrcBlade.tscn" id="17_w7bqa"]
 
 [node name="TestRoom" type="Node2D" unique_id=425892536]
 y_sort_enabled = true
@@ -98,6 +99,16 @@ position = Vector2(90, 147)
 [node name="RoundRedGem" parent="." unique_id=1492109741 instance=ExtResource("11_5hu64")]
 position = Vector2(90, 66)
 
+[node name="OrcBlade" parent="." unique_id=252555697 instance=ExtResource("17_w7bqa")]
+position = Vector2(253, 34)
+
+[node name="Marker2D" type="Marker2D" parent="OrcBlade/PatrolDirector" parent_id_path=PackedInt32Array(252555697, 1784250025) index="0" unique_id=906482905]
+position = Vector2(255, 52)
+
+[node name="Marker2D2" type="Marker2D" parent="OrcBlade/PatrolDirector" parent_id_path=PackedInt32Array(252555697, 1784250025) index="1" unique_id=191179561]
+position = Vector2(255, 86)
+
 [editable path="EasternExit"]
 [editable path="ExitToOutside"]
 [editable path="WesternExit"]
+[editable path="OrcBlade"]

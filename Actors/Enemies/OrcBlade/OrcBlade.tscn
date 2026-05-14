@@ -510,6 +510,8 @@ radius = 7.0
 height = 20.0
 
 [node name="OrcBlade" type="CharacterBody2D" unique_id=252555697]
+collision_layer = 2
+collision_mask = 9
 script = ExtResource("1_73hlf")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=642965317]
