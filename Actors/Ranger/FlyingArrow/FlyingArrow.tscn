@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b4u3vpbwe102w"]
+
+[ext_resource type="Script" uid="uid://4d7ytikb4jbg" path="res://Actors/Ranger/FlyingArrow/flying_arrow.gd" id="1_3o5s0"]
+[ext_resource type="Texture2D" uid="uid://c5m45l31jgfh7" path="res://Actors/Ranger/_art/Single_Arrow_Projectile.png" id="2_i46fs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_soeg6"]
+radius = 2.828427
+
+[node name="FlyingArrow" type="Area2D" unique_id=1579692740]
+script = ExtResource("1_3o5s0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=295453864]
+texture = ExtResource("2_i46fs")
+hframes = 3
+vframes = 3
+frame = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1899239550]
+shape = SubResource("CircleShape2D_soeg6")

@@ -9,6 +9,7 @@ func _ready() -> void:
 	var pos = room_rect.position * MAP_TILE_SIZE
 	var size = room_rect.size * MAP_TILE_SIZE
 	Global.bind_camera.emit(Rect2(pos, size))
+	Global.add_node_to_room.connect(add_child)
 	Global.player.get_node("CollisionShape2D").set_deferred("disabled", false)
 
 
