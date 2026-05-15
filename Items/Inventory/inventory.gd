@@ -43,6 +43,11 @@ func contains(item_data: ItemData) -> bool:
 		return i != null and i.item_data.name == item_data.name).size() > 0
 
 
+func contains_item_name(item_name: String) -> bool:
+	return items.filter(func(i): 
+		return i != null and i.item_data.name == item_name).size() > 0
+
+
 func calculate_score() -> int:
 	var scores = items \
 		.filter(func(item): return item != null) \

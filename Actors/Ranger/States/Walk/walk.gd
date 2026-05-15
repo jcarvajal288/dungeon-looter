@@ -9,7 +9,7 @@ func process_frame(_delta: float) -> State:
 	animation_player.play_with_facing(animation_name)
 	if director.movement_vector == Vector2.ZERO:
 		return idle_state
-	elif director.shoot:
+	elif director.shoot and Global.player.has_ammo_left():
 		return draw_state
 	subject.velocity = director.movement_vector * subject.speed
 	subject.move_and_slide()

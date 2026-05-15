@@ -42,3 +42,7 @@ func get_interacting_nodes() -> Array:
 	query.collision_mask = 1 << (Global.CollisionLayer.ITEM - 1)
 	var results = space_state.intersect_shape(query)
 	return results.map(func(result): return result.collider)
+
+
+func has_ammo_left() -> bool:
+	return inventory.contains_item_name("Arrow")
