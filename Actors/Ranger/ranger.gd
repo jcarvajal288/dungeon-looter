@@ -1,5 +1,7 @@
 class_name Ranger extends CharacterBody2D
 
+const toast_scene = preload("res://UI/ToastNotification/ToastNotification.tscn")
+
 const speed = 80
 
 var facing = "SouthEast"
@@ -46,3 +48,15 @@ func get_interacting_nodes() -> Array:
 
 func has_ammo_left() -> bool:
 	return inventory.contains_item_name("Arrow")
+
+
+func spawn_toast(text_value: String, color: Color = Color.WHITE) -> void:
+	var toast = toast_scene.instantiate()
+	toast.text = text_value
+	toast.modulate = color
+	get_tree().current_scene.add_child(toast)
+	toast.reset_size()
+	var target_position = global_position + Vector2(0, -4.0)
+	var half_size_offset = toast.size / 2
+	toast.global_position = target_position - half_size_offset
+	toast.start()

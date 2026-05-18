@@ -12,6 +12,6 @@ func enter() -> void:
 func process_frame(_delta: float) -> State:
 	if director.movement_vector != Vector2.ZERO:
 		return move_state
-	elif director.shoot and Global.player.has_ammo_left():
+	elif director.shoot_just_pressed:
 		return draw_state
 	return null
