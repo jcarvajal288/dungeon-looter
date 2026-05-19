@@ -1,7 +1,7 @@
 class_name Inventory extends Resource
 
 var size = 8
-var items = []
+var items: Array[InventoryItem] = []
 
 
 func _init() -> void:
@@ -14,7 +14,10 @@ func add_item(item_data: ItemData) -> bool:
 		if items[i] == null:
 			var item = InventoryItem.new()
 			item.item_data = item_data
-			item.amount = 0
+			if item_data.stackable:
+				item.amount = 1
+			else:
+				item.amount = 0
 			items[i] = item
 			return true
 	return false
