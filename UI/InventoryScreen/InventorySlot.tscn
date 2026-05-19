@@ -24,6 +24,7 @@ size_flags_vertical = 4
 texture = SubResource("ImageTexture_eordh")
 
 [node name="ItemCount" type="Label" parent="." unique_id=1338123976]
+z_index = 1
 layout_mode = 2
 size_flags_vertical = 8
 text = "40"
