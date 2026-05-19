@@ -24,5 +24,7 @@ func process_frame(_delta: float) -> State:
 			return idle_state
 		else:
 			fire_arrow.emit()
+			var ammo_type = Global.player.get_equipped_ammo_type()
+			Global.player.inventory.subtract_item_amount(ammo_type, 1)
 			return loose_state
 	return null

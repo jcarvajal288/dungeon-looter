@@ -7,6 +7,8 @@ const speed = 80
 var facing = "SouthEast"
 
 @export var inventory: Inventory
+@export var arrow_type: ItemData
+
 
 func _ready() -> void:
 	Global.player = self
@@ -60,3 +62,7 @@ func spawn_toast(text_value: String, color: Color = Color.WHITE) -> void:
 	var half_size_offset = toast.size / 2
 	toast.global_position = target_position - half_size_offset
 	toast.start()
+
+
+func get_equipped_ammo_type() -> ItemData:
+	return arrow_type

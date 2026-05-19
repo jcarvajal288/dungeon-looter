@@ -11,7 +11,7 @@ func _init() -> void:
 
 func add_item(item_data: ItemData) -> bool:
 	for i in range(size):
-		if items[i] != null and items[i].item_data.name == item_data.name:
+		if item_data_at_slot_index(item_data, i):
 			var item = items[i]
 			if item_data.stackable:
 				item.amount += 1
@@ -42,6 +42,21 @@ func remove_item(index: int) -> InventoryItem:
 	var item = items[index]
 	items[index] = null
 	return item
+
+
+func subtract_item_amount(item_data: ItemData, amount = 1) -> bool:
+	for i in range(size):
+		var item = items[i]
+		if item_data_at_slot_index(item_data, i) and item.amount > 0:
+			item.amount -= 1
+			if item.amount <= 0:
+				remove_item(i)
+			return true
+	return false
+
+
+func item_data_at_slot_index(item_data: ItemData, index) -> bool:
+	return items[index] != null and items[index].item_data.name == item_data.name
 
 
 func has_item_at_index(index: int) -> bool:
