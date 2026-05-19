@@ -11,4 +11,5 @@ description = "Ordinary wooden arrow"
 value = 20
 small_icon = ExtResource("3_bpjns")
 large_icon = ExtResource("1_1vyxr")
+stackable = true
 metadata/_custom_type_script = "uid://c033c2hyxuv6k"

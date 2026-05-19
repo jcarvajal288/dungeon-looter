@@ -6,6 +6,9 @@
 
 [sub_resource type="ImageTexture" id="ImageTexture_eordh"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_eordh"]
+font_size = 6
+
 [node name="InventorySlot" type="PanelContainer" unique_id=3149455]
 custom_minimum_size = Vector2(32, 32)
 offset_right = 32.0
@@ -19,3 +22,11 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = SubResource("ImageTexture_eordh")
+
+[node name="ItemCount" type="Label" parent="." unique_id=1338123976]
+layout_mode = 2
+size_flags_vertical = 8
+text = "40"
+label_settings = SubResource("LabelSettings_eordh")
+horizontal_alignment = 2
+vertical_alignment = 2

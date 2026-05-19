@@ -6,3 +6,4 @@ class_name ItemData extends Resource
 @export var multiplier: float = 1.0
 @export var small_icon: Texture2D
 @export var large_icon: Texture2D
+@export var stackable: bool = false
