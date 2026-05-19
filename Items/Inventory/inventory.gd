@@ -11,7 +11,14 @@ func _init() -> void:
 
 func add_item(item_data: ItemData) -> bool:
 	for i in range(size):
-		if items[i] == null:
+		if items[i] != null and items[i].item_data.name == item_data.name:
+			var item = items[i]
+			if item_data.stackable:
+				item.amount += 1
+			else:
+				continue
+			return true
+		elif items[i] == null:
 			var item = InventoryItem.new()
 			item.item_data = item_data
 			if item_data.stackable:

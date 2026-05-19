@@ -47,7 +47,7 @@ x simple patrolling enemy
     x arrow inventory object
     x disallow ranged attacks if no arrow in inventory
     x create toast popup above player's head when they attempt to shoot with no ammo
-    _ track counts for stackable inventory items (like arrows)
+    x track counts for stackable inventory items (like arrows)
     _ subtract an arrow from inventory stack when firing
 _ change interact and open inventory to use director and signals instead of triggered with _input
 _ orthogonal melee attack animations

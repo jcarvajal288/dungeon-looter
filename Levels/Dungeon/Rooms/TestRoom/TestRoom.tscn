@@ -112,6 +112,15 @@ position = Vector2(255, 86)
 [node name="Arrow" parent="." unique_id=434369611 instance=ExtResource("18_j4lfb")]
 position = Vector2(105, 111)
 
+[node name="Arrow2" parent="." unique_id=895346590 instance=ExtResource("18_j4lfb")]
+position = Vector2(136, 112)
+
+[node name="Arrow3" parent="." unique_id=1840483860 instance=ExtResource("18_j4lfb")]
+position = Vector2(169, 112)
+
+[node name="Arrow4" parent="." unique_id=946451200 instance=ExtResource("18_j4lfb")]
+position = Vector2(132, 145)
+
 [editable path="EasternExit"]
 [editable path="ExitToOutside"]
 [editable path="WesternExit"]
