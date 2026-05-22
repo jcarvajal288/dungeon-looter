@@ -1,3 +1,2 @@
 - Items reappear after leaving and re-entering rooms
-- If a direction is not held when shooting the arrow does not move
 

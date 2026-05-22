@@ -6,7 +6,7 @@ var arrow_scene: PackedScene = preload("res://Actors/Ranger/FlyingArrow/FlyingAr
 
 
 func enter() -> void:
-	var direction = director.movement_vector
+	var direction = subject.last_direction
 	var arrow = arrow_scene.instantiate()
 	arrow.direction = direction
 	arrow.global_position = subject.global_position

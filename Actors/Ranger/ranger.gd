@@ -9,6 +9,8 @@ var facing = "SouthEast"
 @export var inventory: Inventory
 @export var arrow_type: ItemData
 
+@onready var last_direction = Vector2.DOWN
+
 
 func _ready() -> void:
 	Global.player = self

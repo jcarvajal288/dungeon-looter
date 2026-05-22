@@ -12,6 +12,8 @@ func _physics_process(_delta: float) -> void:
 		snapped(mv.x, 0.5), 
 		snapped(mv.y, 0.5)
 	).normalized()
+	if movement_vector !=  Vector2.ZERO:
+		subject.last_direction = movement_vector
 	interact = Input.is_action_just_pressed("interact")
 	shoot_just_pressed = Input.is_action_just_pressed("shoot")
 	shoot_held = Input.is_action_pressed("shoot")
