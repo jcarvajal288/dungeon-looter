@@ -52,7 +52,7 @@ x ranged player attacks
     x remove arrow item from inventory when amount is 0
 + combat and health
     x arrow hits orc and disappears
-    _ orc takes damage
+    x orc takes damage
     _ orc dies at 0 hp
 # change interact and open inventory to use director and signals instead of triggered with _input
 _ orthogonal melee attack animations

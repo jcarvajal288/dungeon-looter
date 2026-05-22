@@ -560,6 +560,8 @@ script = ExtResource("10_nclge")
 metadata/_custom_type_script = "uid://cvwc3ycxgq6il"
 
 [node name="Hurtbox" parent="." unique_id=2047941472 instance=ExtResource("10_johbk")]
+collision_layer = 2
+collision_mask = 0
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0" unique_id=49741475]
 position = Vector2(0, -1)

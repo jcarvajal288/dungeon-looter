@@ -45,9 +45,6 @@ func set_direction_frame() -> void:
 
 
 func area_collide(area: Area2D) -> void:
-	print("area collide")
-	print(area)
 	if area.has_method("register_hit"):
-		print("is hurtbox")
 		area.register_hit(1)
 		queue_free()
