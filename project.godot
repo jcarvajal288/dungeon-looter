@@ -36,7 +36,7 @@ window/stretch/scale_mode="integer"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/Director/plugin.cfg", "res://addons/State/plugin.cfg", "res://addons/StateMachine/plugin.cfg")
+enabled=PackedStringArray("res://addons/Director/plugin.cfg", "res://addons/Health/plugin.cfg", "res://addons/Hitbox/plugin.cfg", "res://addons/Hurtbox/plugin.cfg", "res://addons/State/plugin.cfg", "res://addons/StateMachine/plugin.cfg")
 
 [input]
 

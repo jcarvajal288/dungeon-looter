@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://da7lbmrejejmq"]
 
 [ext_resource type="Script" uid="uid://b5oqxjecwfuo2" path="res://Actors/Enemies/OrcBlade/orc_blade.gd" id="1_73hlf"]
-[ext_resource type="Script" uid="uid://b8q8k6ipb63q2" path="res://addons/StateMachine/state_machine.gd" id="2_h57js"]
+[ext_resource type="Script" uid="uid://ca2wyv2yajbqt" path="res://addons/StateMachine/state_machine.gd" id="2_h57js"]
 [ext_resource type="Texture2D" uid="uid://ctdwh1qnqqsho" path="res://Actors/Enemies/OrcBlade/_art/Idle.png" id="2_rmyw5"]
 [ext_resource type="Script" uid="uid://b255xkjxv111u" path="res://Actors/Components/AnimationPlayer/animation_player.gd" id="3_rmyw5"]
 [ext_resource type="Texture2D" uid="uid://c1vx7eechnejr" path="res://Actors/Enemies/OrcBlade/_art/Walk.png" id="3_tmruj"]
 [ext_resource type="PackedScene" uid="uid://pav2wgjxruem" path="res://Actors/Components/States/Idle/Idle.tscn" id="4_2haau"]
 [ext_resource type="PackedScene" uid="uid://b7britp72xkj" path="res://Actors/Components/Directors/PatrolDirector/PatrolDirector.tscn" id="4_pobcf"]
 [ext_resource type="PackedScene" uid="uid://da3vqdxy562qo" path="res://Actors/Components/States/Walk/Walk.tscn" id="5_rmyw5"]
+[ext_resource type="PackedScene" uid="uid://be36r4g48tjmt" path="res://addons/Hurtbox/Hurtbox.tscn" id="10_johbk"]
+[ext_resource type="Script" uid="uid://cvwc3ycxgq6il" path="res://addons/Health/health.gd" id="10_nclge"]
 
 [sub_resource type="Animation" id="Animation_tmruj"]
 length = 0.001
@@ -509,6 +511,10 @@ _data = {
 radius = 7.0
 height = 20.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nclge"]
+radius = 7.0
+height = 20.0
+
 [node name="OrcBlade" type="CharacterBody2D" unique_id=252555697]
 collision_layer = 2
 collision_mask = 9
@@ -535,7 +541,6 @@ script = ExtResource("2_h57js")
 director = NodePath("../PatrolDirector")
 animation_player = NodePath("../AnimationPlayer")
 starting_state = NodePath("Idle")
-metadata/_custom_type_script = "uid://b8q8k6ipb63q2"
 
 [node name="Idle" parent="StateMachine" unique_id=1234505120 node_paths=PackedStringArray("move_state") instance=ExtResource("4_2haau")]
 move_state = NodePath("../Walk")
@@ -549,3 +554,16 @@ animation_type = 1
 
 [node name="PatrolDirector" parent="." unique_id=1784250025 node_paths=PackedStringArray("subject") instance=ExtResource("4_pobcf")]
 subject = NodePath("..")
+
+[node name="Health" type="Node" parent="." unique_id=1902630958]
+script = ExtResource("10_nclge")
+metadata/_custom_type_script = "uid://cvwc3ycxgq6il"
+
+[node name="Hurtbox" parent="." unique_id=2047941472 instance=ExtResource("10_johbk")]
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0" unique_id=49741475]
+position = Vector2(0, -1)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_nclge")
+
+[editable path="Hurtbox"]
