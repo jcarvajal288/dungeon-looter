@@ -50,11 +50,15 @@ x ranged player attacks
     x track counts for stackable inventory items (like arrows)
     x subtract an arrow from inventory stack when firing
     x remove arrow item from inventory when amount is 0
-+ kill orc with arrows
+x kill orc with arrows
     x arrow hits orc and disappears
     x orc takes damage
     x orc reacts to damage
     x orc dies at 0 hp
+_ show player health on inventory screen
+_ orc has vision cone and attacks player if they enter it
+_ player can take damage and die
 # change interact and open inventory to use director and signals instead of triggered with _input
+_ small level incorporating keys, orcs, and gem puzzle
+    _ map the layout
 _ orthogonal melee attack animations
-_ single small level

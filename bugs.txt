@@ -1,2 +1,2 @@
 - Items reappear after leaving and re-entering rooms
-
+- Content sometimes does not extend to fill the screen
