@@ -50,9 +50,10 @@ x ranged player attacks
     x track counts for stackable inventory items (like arrows)
     x subtract an arrow from inventory stack when firing
     x remove arrow item from inventory when amount is 0
-x kill orc with arrows
++ kill orc with arrows
     x arrow hits orc and disappears
     x orc takes damage
+    x orc reacts to damage
     x orc dies at 0 hp
 # change interact and open inventory to use director and signals instead of triggered with _input
 _ orthogonal melee attack animations

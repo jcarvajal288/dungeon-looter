@@ -8,8 +8,14 @@ func _ready() -> void:
 	z_index =  Global.RenderOrder.PLAYER
 	$StateMachine.init(self)
 	$Health.set_health(starting_health)
-	$Hurtbox.on_hit.connect($Health.take_damage)
+	$Hurtbox.on_hit.connect(_on_damage)
 	$Health.on_death.connect(_on_death)
+
+
+func _on_damage(damage: float) -> void:
+	$Health.take_damage(damage)
+	if $Health.current_health > 0:
+		$StateMachine.signal_state_change.emit($StateMachine/Damage)
 
 
 func _on_death() -> void:

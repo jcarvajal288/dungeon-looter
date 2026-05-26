@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dvoanquc61axu"]
+
+[ext_resource type="Script" uid="uid://dqltebbs8fx71" path="res://Actors/Components/States/Damage/damage.gd" id="1_2qvue"]
+
+[node name="Damage" type="Node" unique_id=1564657315]
+script = ExtResource("1_2qvue")
+animation_name = "dmg"
+animation_type = 1
+metadata/_custom_type_script = "uid://b8s8uysnc7bpq"
