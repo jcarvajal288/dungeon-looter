@@ -68,3 +68,7 @@ func spawn_toast(text_value: String, color: Color = Color.WHITE) -> void:
 
 func get_equipped_ammo_type() -> ItemData:
 	return arrow_type
+
+
+func get_current_health() -> float:
+	return $Health.current_health

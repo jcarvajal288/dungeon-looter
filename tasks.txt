@@ -55,7 +55,7 @@ x kill orc with arrows
     x orc takes damage
     x orc reacts to damage
     x orc dies at 0 hp
-_ show player health on inventory screen
+x show player health on inventory screen
 _ orc has vision cone and attacks player if they enter it
 _ player can take damage and die
 # change interact and open inventory to use director and signals instead of triggered with _input

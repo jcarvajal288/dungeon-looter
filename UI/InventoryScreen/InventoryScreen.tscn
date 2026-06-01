@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://bygvlwo44c1ya" path="res://UI/InventoryScreen/ItemInfo.tscn" id="5_871pb"]
 [ext_resource type="Script" uid="uid://bf8iogclhaigs" path="res://UI/InventoryScreen/item_info.gd" id="7_1w32s"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_1w32s"]
+font_color = Color(0.83137256, 0, 0, 1)
+
 [node name="InventoryScreen" type="CanvasLayer" unique_id=1798393088]
 script = ExtResource("1_0h4yy")
 inventory = ExtResource("2_bss63")
@@ -51,3 +54,12 @@ offset_top = 233.0
 offset_right = 192.0
 offset_bottom = 265.0
 script = ExtResource("7_1w32s")
+
+[node name="HealthLabel" type="Label" parent="Control" unique_id=140466040]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 17.0
+offset_right = 59.0
+offset_bottom = 40.0
+text = "HP: 0"
+label_settings = SubResource("LabelSettings_1w32s")

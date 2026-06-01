@@ -12,6 +12,7 @@ signal toggle_inventory_screen
 @onready var selected_inventory_slot: Vector2i = Vector2i(0, 0)
 @onready var inventory_selector: TextureRect = $Control/InventorySelector
 @onready var inventory_grid: InventoryGrid = $Control/InventoryGrid
+@onready var health_label: Label = $Control/HealthLabel
 
 
 func _ready() -> void:
@@ -34,8 +35,9 @@ func _input(event: InputEvent) -> void:
 func toggle_inventory() -> void:
 	control.visible = !control.visible
 	if control.visible:
-		inventory_grid.refresh(inventory)
 		Global.toggle_pause.emit(true)
+		inventory_grid.refresh(inventory)
+		update_player_health()
 		self.process_mode = Node.PROCESS_MODE_INHERIT
 	else:
 		Global.toggle_pause.emit(false)
@@ -70,3 +72,8 @@ func use_selected_item() -> bool:
 				inventory_grid.refresh(inventory)
 			return true
 	return false
+
+
+func update_player_health() -> void:
+	var health = Global.player.get_current_health()
+	health_label.text = "HP: %d" % health
