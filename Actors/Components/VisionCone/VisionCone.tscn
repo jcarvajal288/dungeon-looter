@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ge6nww266lul"]
+
+[ext_resource type="Script" uid="uid://b3cv3jrdui77l" path="res://Actors/Components/VisionCone/vision_cone.gd" id="1_weij3"]
+
+[node name="VisionCone" type="Area2D" unique_id=1043830285]
+collision_layer = 0
+script = ExtResource("1_weij3")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1239007794]
+polygon = PackedVector2Array(0, 0, 50, 50, -50, 50)

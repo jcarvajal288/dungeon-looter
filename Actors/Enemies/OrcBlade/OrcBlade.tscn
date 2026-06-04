@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://be36r4g48tjmt" path="res://addons/Hurtbox/Hurtbox.tscn" id="10_johbk"]
 [ext_resource type="Script" uid="uid://cvwc3ycxgq6il" path="res://addons/Health/health.gd" id="10_nclge"]
 [ext_resource type="PackedScene" uid="uid://dvoanquc61axu" path="res://Actors/Components/States/Damage/Damage.tscn" id="11_l33ax"]
+[ext_resource type="PackedScene" uid="uid://ge6nww266lul" path="res://Actors/Components/VisionCone/VisionCone.tscn" id="15_wqfqb"]
 
 [sub_resource type="Animation" id="Animation_tmruj"]
 length = 0.001
@@ -846,5 +847,10 @@ collision_mask = 0
 position = Vector2(0, -1)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_nclge")
+
+[node name="VisionCone" parent="." unique_id=1043830285 node_paths=PackedStringArray("director") instance=ExtResource("15_wqfqb")]
+length = 75.0
+width = 75.0
+director = NodePath("../PatrolDirector")
 
 [editable path="Hurtbox"]

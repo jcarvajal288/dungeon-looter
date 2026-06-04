@@ -20,3 +20,8 @@ func _on_damage(damage: float) -> void:
 
 func _on_death() -> void:
 	$StateMachine.signal_state_change.emit($StateMachine/Die)
+
+
+func _process(_delta: float) -> void:
+	if $VisionCone.can_see(Global.player):
+		print("player spotted")
