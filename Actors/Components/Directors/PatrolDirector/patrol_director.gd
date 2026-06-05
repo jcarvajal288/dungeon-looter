@@ -1,9 +1,12 @@
 extends Director
 
 @export var is_loop: bool = true
+
 var patrol_points: Array[Marker2D]
 var destination_index = 0
 var is_reverse: bool = false
+
+var has_spotted_player: bool = false
 
 
 func _ready() -> void:
@@ -14,6 +17,18 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	reset()
+	if has_spotted_player:
+		attack_player()
+	else:
+		patrol()
+
+
+func attack_player() -> void:
+	var destination = Global.player.global_position
+	movement_vector = subject.global_position.direction_to(destination)
+
+
+func patrol() -> void:
 	var destination = patrol_points[destination_index]
 	var distance_to_destination = subject.global_position.distance_to(destination.global_position)
 	if distance_to_destination <= 2.0:

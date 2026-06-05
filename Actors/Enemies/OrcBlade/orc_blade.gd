@@ -24,4 +24,4 @@ func _on_death() -> void:
 
 func _process(_delta: float) -> void:
 	if $VisionCone.can_see(Global.player):
-		print("player spotted")
+		$PatrolDirector.has_spotted_player = true
