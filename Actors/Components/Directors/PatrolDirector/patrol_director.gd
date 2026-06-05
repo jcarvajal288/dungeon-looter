@@ -7,6 +7,7 @@ var destination_index = 0
 var is_reverse: bool = false
 
 var has_spotted_player: bool = false
+const attack_distance: float = 24.0
 
 
 func _ready() -> void:

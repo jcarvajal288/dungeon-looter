@@ -1,6 +1,7 @@
 extends State
 
 @export var move_state: State
+@export var attack_state: State
 
 func enter() -> void:
 	super()
