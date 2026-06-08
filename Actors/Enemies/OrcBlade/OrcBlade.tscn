@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dvoanquc61axu" path="res://Actors/Components/States/Damage/Damage.tscn" id="11_l33ax"]
 [ext_resource type="PackedScene" uid="uid://0qvbym3lpd70" path="res://Actors/Components/States/Attack/Attack.tscn" id="13_sqi7u"]
 [ext_resource type="PackedScene" uid="uid://ge6nww266lul" path="res://Actors/Components/VisionCone/VisionCone.tscn" id="15_wqfqb"]
+[ext_resource type="PackedScene" uid="uid://crdf4rli7xfpj" path="res://addons/Hitbox/Hitbox.tscn" id="18_m0gsh"]
 
 [sub_resource type="Animation" id="Animation_tmruj"]
 length = 0.001
@@ -67,6 +68,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hitbox/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_k4d3n"]
@@ -121,6 +134,18 @@ tracks/3/keys = {
 "update": 1,
 "values": [16, 17, 18, 19, 20, 21, 22, 23]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hitbox/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
 
 [sub_resource type="Animation" id="Animation_6rr5c"]
 resource_name = "attackNorthWest"
@@ -173,6 +198,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [24, 25, 26, 27, 28, 29, 30, 31]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hitbox/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
 }
 
 [sub_resource type="Animation" id="Animation_1cumc"]
@@ -227,6 +264,18 @@ tracks/3/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hitbox/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.5026571),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
 
 [sub_resource type="Animation" id="Animation_mdwac"]
 resource_name = "attackSouthWest"
@@ -279,6 +328,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [8, 9, 10, 11, 12, 13, 14, 15]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hitbox/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.39808974, 0.49898806),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
 }
 
 [sub_resource type="Animation" id="Animation_wtji6"]
@@ -1008,6 +1069,9 @@ height = 20.0
 radius = 7.0
 height = 20.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_cl81r"]
+radius = 24.0
+
 [node name="OrcBlade" type="CharacterBody2D" unique_id=252555697]
 collision_layer = 2
 collision_mask = 9
@@ -1076,4 +1140,12 @@ length = 75.0
 width = 75.0
 director = NodePath("../PatrolDirector")
 
+[node name="Hitbox" parent="." unique_id=1863697699 instance=ExtResource("18_m0gsh")]
+collision_layer = 0
+
+[node name="CollisionShape2D" parent="Hitbox" index="0" unique_id=611471057]
+shape = SubResource("CircleShape2D_cl81r")
+disabled = true
+
 [editable path="Hurtbox"]
+[editable path="Hitbox"]

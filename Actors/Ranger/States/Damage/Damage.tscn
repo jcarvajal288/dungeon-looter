@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://upbveqaul7w7"]
+
+[ext_resource type="Script" uid="uid://dwaa4rltqbohq" path="res://Actors/Ranger/States/Damage/damage.gd" id="1_opctv"]
+
+[node name="Damage" type="Node" unique_id=1756149574]
+script = ExtResource("1_opctv")
+animation_name = "dmg"
+animation_type = 1
+metadata/_custom_type_script = "uid://b8s8uysnc7bpq"
