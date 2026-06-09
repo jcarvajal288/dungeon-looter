@@ -75,5 +75,9 @@ func get_current_health() -> float:
 	return $Health.current_health
 
 
-func _on_hit(_damage: float) -> void:
-	print("player hit")
+func _on_hit(damage: float) -> void:
+	$Health.take_damage(damage)
+	if $Health.is_dead():
+		$StateMachine.change_state($StateMachine/Death)
+	else:
+		$StateMachine.change_state($StateMachine/Damage)
