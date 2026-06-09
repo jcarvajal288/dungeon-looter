@@ -16,6 +16,7 @@ func _ready() -> void:
 	Global.player = self
 	z_index =  Global.RenderOrder.PLAYER
 	$StateMachine.init(self)
+	$Hurtbox.on_hit.connect(_on_hit)
 
 
 func _input(event: InputEvent) -> void:
@@ -72,3 +73,7 @@ func get_equipped_ammo_type() -> ItemData:
 
 func get_current_health() -> float:
 	return $Health.current_health
+
+
+func _on_hit(_damage: float) -> void:
+	print("player hit")

@@ -16,6 +16,7 @@
 [ext_resource type="Resource" uid="uid://c7cnwmeas0p37" path="res://Items/Arrows/arrow.tres" id="11_vmgv4"]
 [ext_resource type="PackedScene" uid="uid://upbveqaul7w7" path="res://Actors/Ranger/States/Damage/Damage.tscn" id="14_h2t5r"]
 [ext_resource type="Script" uid="uid://cvwc3ycxgq6il" path="res://addons/Health/health.gd" id="14_vmgv4"]
+[ext_resource type="PackedScene" uid="uid://be36r4g48tjmt" path="res://addons/Hurtbox/Hurtbox.tscn" id="17_2dg17"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bfyra"]
 radius = 6.0
@@ -1164,6 +1165,9 @@ _data = {
 &"walkSouthWest": SubResource("Animation_qk1gc")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_mypop"]
+radius = 6.0
+
 [node name="Ranger" type="CharacterBody2D" unique_id=231123919]
 y_sort_enabled = true
 collision_mask = 10
@@ -1216,3 +1220,11 @@ subject = NodePath("..")
 script = ExtResource("14_vmgv4")
 max_health = 5.0
 metadata/_custom_type_script = "uid://cvwc3ycxgq6il"
+
+[node name="Hurtbox" parent="." unique_id=2047941472 instance=ExtResource("17_2dg17")]
+collision_mask = 0
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0" unique_id=49741475]
+shape = SubResource("CircleShape2D_mypop")
+
+[editable path="Hurtbox"]
