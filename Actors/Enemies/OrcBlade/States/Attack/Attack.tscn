@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://0qvbym3lpd70"]
 
-[ext_resource type="Script" uid="uid://6xboepycla8u" path="res://Actors/Components/States/Attack/attack.gd" id="1_bs0vw"]
+[ext_resource type="Script" uid="uid://6xboepycla8u" path="res://Actors/Enemies/OrcBlade/States/Attack/attack.gd" id="1_bs0vw"]
 
 [node name="Attack" type="Node" unique_id=1181665151]
 script = ExtResource("1_bs0vw")

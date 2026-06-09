@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://coe7bvpgwxuw1"]
 
-[ext_resource type="Script" uid="uid://bdtymh2w3edey" path="res://Actors/Components/States/Die/die.gd" id="1_oq5a5"]
+[ext_resource type="Script" uid="uid://bdtymh2w3edey" path="res://Actors/Enemies/OrcBlade/States/Die/die.gd" id="1_oq5a5"]
 
 [node name="Die" type="Node" unique_id=594046698]
 script = ExtResource("1_oq5a5")

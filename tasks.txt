@@ -58,8 +58,8 @@ x kill orc with arrows
 x show player health on inventory screen
 x orc has vision cone and attacks player if they enter it
 x player can take damage and die
+x move Orc states from Component folder to OrcBlade folder
 _ transition to game over screen when player dies
-_ move Orc states from Component folder to OrcBlade folder
 # change interact and open inventory to use director and signals instead of triggered with _input
 _ small level incorporating keys, orcs, and gem puzzle
     _ map the layout
